@@ -42,7 +42,7 @@ RenderSettings:
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 9
+  serializedVersion: 11
   m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -54,7 +54,7 @@ LightmapSettings:
     m_EnableBakedLightmaps: 0
     m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
-    serializedVersion: 8
+    serializedVersion: 9
     m_Resolution: 2
     m_BakeResolution: 40
     m_TextureWidth: 1024
@@ -87,7 +87,7 @@ LightmapSettings:
     m_PVRFilteringAtrousNormalSigma: 1
     m_PVRFilteringAtrousPositionSigma: 1
   m_LightingDataAsset: {fileID: 0}
-  m_ShadowMaskMode: 2
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -178,6 +178,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!1 &110595154
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,6 +189,7 @@ GameObject:
   - component: {fileID: 110595156}
   - component: {fileID: 110595155}
   - component: {fileID: 110595157}
+  - component: {fileID: 110595158}
   m_Layer: 0
   m_Name: floor
   m_TagString: Untagged
@@ -236,6 +238,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
+  m_MaskInteraction: 0
 --- !u!4 &110595156
 Transform:
   m_ObjectHideFlags: 0
@@ -280,6 +283,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.6971464, y: 0.71739864}
   m_EdgeRadius: 0
+--- !u!114 &110595158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 110595154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f1e940aaa553bb4197128918554132a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &113922701
 GameObject:
   m_ObjectHideFlags: 0
@@ -350,6 +364,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!1 &200955696
 GameObject:
   m_ObjectHideFlags: 0
@@ -360,6 +375,7 @@ GameObject:
   - component: {fileID: 200955699}
   - component: {fileID: 200955698}
   - component: {fileID: 200955697}
+  - component: {fileID: 200955700}
   m_Layer: 0
   m_Name: floor (4)
   m_TagString: Untagged
@@ -433,6 +449,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
+  m_MaskInteraction: 0
 --- !u!4 &200955699
 Transform:
   m_ObjectHideFlags: 0
@@ -452,6 +469,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &200955700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 200955696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f1e940aaa553bb4197128918554132a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &346041938
 GameObject:
   m_ObjectHideFlags: 0
@@ -522,6 +550,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!1 &374386050
 GameObject:
   m_ObjectHideFlags: 0
@@ -606,6 +635,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
+  m_MaskInteraction: 0
 --- !u!61 &374386054
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -737,6 +767,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!1 &621398979
 GameObject:
   m_ObjectHideFlags: 0
@@ -908,6 +939,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!1 &869473641
 GameObject:
   m_ObjectHideFlags: 0
@@ -978,6 +1010,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!1 &880745868
 GameObject:
   m_ObjectHideFlags: 0
@@ -1048,6 +1081,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!1 &902344871
 GameObject:
   m_ObjectHideFlags: 0
@@ -1118,6 +1152,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!1 &919650609
 GameObject:
   m_ObjectHideFlags: 0
@@ -1128,6 +1163,7 @@ GameObject:
   - component: {fileID: 919650611}
   - component: {fileID: 919650610}
   - component: {fileID: 919650612}
+  - component: {fileID: 919650613}
   m_Layer: 0
   m_Name: floor (1)
   m_TagString: Untagged
@@ -1176,6 +1212,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
+  m_MaskInteraction: 0
 --- !u!4 &919650611
 Transform:
   m_ObjectHideFlags: 0
@@ -1220,6 +1257,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.697131, y: 0.7405338}
   m_EdgeRadius: 0
+--- !u!114 &919650613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 919650609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f1e940aaa553bb4197128918554132a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &921186223
 GameObject:
   m_ObjectHideFlags: 0
@@ -1290,6 +1338,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!1 &1115238616
 GameObject:
   m_ObjectHideFlags: 0
@@ -1360,6 +1409,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!1 &1130463502
 GameObject:
   m_ObjectHideFlags: 0
@@ -1430,6 +1480,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!1 &1186010137
 GameObject:
   m_ObjectHideFlags: 0
@@ -1500,6 +1551,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!1 &1209374282
 GameObject:
   m_ObjectHideFlags: 0
@@ -1570,6 +1622,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!1 &1216503714
 GameObject:
   m_ObjectHideFlags: 0
@@ -1640,6 +1693,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!1 &1225596253
 GameObject:
   m_ObjectHideFlags: 0
@@ -1710,6 +1764,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!1 &1284188575
 GameObject:
   m_ObjectHideFlags: 0
@@ -1780,6 +1835,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!1 &1386957054
 GameObject:
   m_ObjectHideFlags: 0
@@ -1850,6 +1906,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!1 &1406932490
 GameObject:
   m_ObjectHideFlags: 0
@@ -1920,6 +1977,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!1 &1562773185
 GameObject:
   m_ObjectHideFlags: 0
@@ -1930,6 +1988,7 @@ GameObject:
   - component: {fileID: 1562773187}
   - component: {fileID: 1562773186}
   - component: {fileID: 1562773188}
+  - component: {fileID: 1562773189}
   m_Layer: 0
   m_Name: floor (3)
   m_TagString: Untagged
@@ -1978,6 +2037,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
+  m_MaskInteraction: 0
 --- !u!4 &1562773187
 Transform:
   m_ObjectHideFlags: 0
@@ -2022,6 +2082,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.697377, y: 0.7180433}
   m_EdgeRadius: 0
+--- !u!114 &1562773189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1562773185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f1e940aaa553bb4197128918554132a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1588467827
 GameObject:
   m_ObjectHideFlags: 0
@@ -2092,6 +2163,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!1 &1590828068
 GameObject:
   m_ObjectHideFlags: 0
@@ -2162,6 +2234,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!1 &1655171812
 GameObject:
   m_ObjectHideFlags: 0
@@ -2232,6 +2305,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!1 &1672846345
 GameObject:
   m_ObjectHideFlags: 0
@@ -2302,6 +2376,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!1 &1679682025
 GameObject:
   m_ObjectHideFlags: 0
@@ -2372,6 +2447,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!1 &1725757938
 GameObject:
   m_ObjectHideFlags: 0
@@ -2442,6 +2518,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!1 &1752363324
 GameObject:
   m_ObjectHideFlags: 0
@@ -2452,6 +2529,7 @@ GameObject:
   - component: {fileID: 1752363326}
   - component: {fileID: 1752363325}
   - component: {fileID: 1752363327}
+  - component: {fileID: 1752363328}
   m_Layer: 0
   m_Name: floor (2)
   m_TagString: Untagged
@@ -2500,6 +2578,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
+  m_MaskInteraction: 0
 --- !u!4 &1752363326
 Transform:
   m_ObjectHideFlags: 0
@@ -2544,6 +2623,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.65645, y: 0.7179394}
   m_EdgeRadius: 0
+--- !u!114 &1752363328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1752363324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f1e940aaa553bb4197128918554132a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1859788986
 GameObject:
   m_ObjectHideFlags: 0
@@ -2614,6 +2704,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!1 &1948215385
 GameObject:
   m_ObjectHideFlags: 0
@@ -2625,7 +2716,6 @@ GameObject:
   - component: {fileID: 1948215390}
   - component: {fileID: 1948215389}
   - component: {fileID: 1948215388}
-  - component: {fileID: 1948215387}
   - component: {fileID: 1948215386}
   m_Layer: 0
   m_Name: Player
@@ -2643,17 +2733,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7c9197dbbf151b6428d95693abd14bc7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1948215387
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1948215385}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa97fd5b03cb1d143a62867b035433d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!50 &1948215388
@@ -2742,6 +2821,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!4 &1948215391
 Transform:
   m_ObjectHideFlags: 0
@@ -2826,6 +2906,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!1 &2035198073
 GameObject:
   m_ObjectHideFlags: 0
@@ -2896,6 +2977,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!1 &2064136597
 GameObject:
   m_ObjectHideFlags: 0
@@ -2966,6 +3048,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!1 &2099880558
 GameObject:
   m_ObjectHideFlags: 0
@@ -3023,6 +3106,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!4 &2099880560
 Transform:
   m_ObjectHideFlags: 0
@@ -3106,3 +3190,4 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
