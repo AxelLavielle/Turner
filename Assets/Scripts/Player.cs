@@ -12,6 +12,7 @@ public class Player : MonoBehaviour {
     private Animator anim;
     private Rigidbody2D rgdbd;
     private bool jump = false;
+    private bool grounded = false;
     
     private void Start () {
         anim = GetComponent<Animator>();
@@ -42,8 +43,11 @@ public class Player : MonoBehaviour {
             Flip();
 
         //In case the player want to jump, well, we make it jump
-        if (jump && Mathf.RoundToInt(rgdbd.velocity.y / 2) == 0)
+        if (grounded && jump && Mathf.RoundToInt(rgdbd.velocity.y / 2) == 0)
+        {
+            grounded = false;
             rgdbd.AddForce(new Vector2(0f, jumpForce * 100));
+        }
         jump = false;
     }
 
@@ -52,6 +56,7 @@ public class Player : MonoBehaviour {
         if (Input.GetButtonDown("Jump"))
             jump = true;
     }
+
     private void FixedUpdate()
     {
         movements();
@@ -59,6 +64,7 @@ public class Player : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        grounded = true;
     }
 
 }
