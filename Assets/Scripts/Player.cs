@@ -63,4 +63,14 @@ public class Player : MonoBehaviour {
         if (collision.gameObject.CompareTag("Floor"))
             grounded = true;
     }
+
+    public Vector2 getVelocity()
+    {
+        return (rgdbd.velocity);
+    }
+
+    public Vector2 getPosition()
+    {
+        return (transform.position);
+    }
 }
