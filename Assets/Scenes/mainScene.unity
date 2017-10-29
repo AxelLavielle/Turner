@@ -315,7 +315,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 163.15088
+  orthographic size: 485.8764
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -342,7 +342,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &621398985
 MonoBehaviour:
@@ -394,6 +394,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4610474071472900, guid: f2b19a23a65af7246bb5278559793a6a, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f2b19a23a65af7246bb5278559793a6a, type: 2}
   m_IsPrefabParent: 0
@@ -428,11 +432,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c9197dbbf151b6428d95693abd14bc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  facingRight: 1
-  jump: 0
-  maxSpeed: 200
-  moveForce: 3650
-  jumpForce: 1000
+  moveForce: 7
+  jumpForce: 500
 --- !u!95 &1948215387
 Animator:
   serializedVersion: 3
@@ -464,7 +465,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 300
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -549,5 +550,5 @@ Transform:
   m_Children:
   - {fileID: 374386051}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
