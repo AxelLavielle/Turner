@@ -10,7 +10,7 @@ public class CameraPlayer : MonoBehaviour
     [SerializeField]
     private Transform target;
     [SerializeField]
-    private int cameraPositionThresholdY = -351;
+    private int cameraPositionThresholdY;
 
     void FixedUpdate()
     {
