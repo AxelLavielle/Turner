@@ -5,37 +5,37 @@ using UnityEngine;
 public class Body : MonoBehaviour {
 
     [SerializeField]
-    private float moveForce;
+    protected float moveForce;
     [SerializeField]
-    private float jumpForce;
+    protected float jumpForce;
 
-    void Red()
+    public void Red()
     {
         moveForce *= 2;
         jumpForce *= 2;
     }
 
-    void Orange()
+    public void Orange()
     {
 
     }
 
-    void Yellow()
+    public void Yellow()
     {
 
     }
 
-    void Green()
+    public void Green()
     {
 
     }
 
-    void Blue()
+    public void Blue()
     {
 
     }
 
-    void Purple()
+    public void Purple()
     {
 
     }

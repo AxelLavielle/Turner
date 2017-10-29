@@ -4,10 +4,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Player : Body {
-    [SerializeField]
-    private float moveForce;
-    [SerializeField]
-    private float jumpForce;
 
     private bool facingRight = true;
     private Animator anim;
