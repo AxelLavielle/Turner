@@ -9,9 +9,9 @@ public class Player : MonoBehaviour {
     private float jumpForce;
 
     private bool facingRight = true;
-    private bool grounded = true;
     private Animator anim;
     private Rigidbody2D rgdbd;
+    private bool jump = false;
     
     private void Start () {
         anim = GetComponent<Animator>();
@@ -42,10 +42,16 @@ public class Player : MonoBehaviour {
             Flip();
 
         //In case the player want to jump, well, we make it jump
-        if (Input.GetButtonDown("Jump") && Mathf.RoundToInt(rgdbd.velocity.y/2) == 0)
+        if (jump && Mathf.RoundToInt(rgdbd.velocity.y / 2) == 0)
             rgdbd.AddForce(new Vector2(0f, jumpForce * 100));
+        jump = false;
     }
 
+    private void Update()
+    {
+        if (Input.GetButtonDown("Jump"))
+            jump = true;
+    }
     private void FixedUpdate()
     {
         movements();
