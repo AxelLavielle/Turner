@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour {
     [SerializeField]
@@ -62,9 +63,13 @@ public class Player : MonoBehaviour {
         movements();
     }
 
+    private void death()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         grounded = true;
     }
-
 }
