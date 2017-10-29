@@ -56,7 +56,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4610474071472900}
   m_Layer: 0
-  m_Name: Floor
+  m_Name: floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -420,7 +420,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
 --- !u!212 &212131179926438128
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -462,7 +461,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
 --- !u!212 &212153026026295092
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -504,7 +502,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
 --- !u!212 &212588525809895318
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -546,7 +543,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
 --- !u!212 &212763781039490862
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -588,4 +584,3 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
