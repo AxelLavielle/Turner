@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class CameraPlayer : MonoBehaviour
 {
-    public float dampTime;
+    [SerializeField]
+    private float dampTime;
     private Vector3 velocity = Vector3.zero;
-    public Transform target;
+    [SerializeField]
+    private Transform target;
+    [SerializeField]
+    private int cameraPositionThresholdY = -351;
 
     void FixedUpdate()
     {
@@ -17,6 +21,8 @@ public class CameraPlayer : MonoBehaviour
         //We form the destination from our position to the delta
         Vector3 destination = transform.position + delta;
         //We go to it
+        if (destination.y < cameraPositionThresholdY)
+            destination.y = cameraPositionThresholdY;
         transform.position = Vector3.SmoothDamp(transform.position, destination, ref velocity, dampTime);
     }
 }
