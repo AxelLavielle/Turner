@@ -9,6 +9,11 @@ public class Body : MonoBehaviour {
     [SerializeField]
     protected float jumpForce;
 
+    public void Neutral()
+    {
+
+    }
+
     public void Red()
     {
         moveForce *= 2;
@@ -39,4 +44,5 @@ public class Body : MonoBehaviour {
     {
 
     }
+
 }
