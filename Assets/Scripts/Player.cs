@@ -69,4 +69,9 @@ public class Player : Body {
         if (collision.gameObject.tag == "Floor")
             grounded = true;
     }
+
+    private void SeletColor()
+    {
+        
+    }
 }
