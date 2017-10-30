@@ -5,6 +5,7 @@ using UnityEngine;
 public class Plateform : MonoBehaviour {
     [SerializeField]
     private int color;
+    private int oldColor;
     [SerializeField]
     private float fadeSpeed = 0.05f;
     SpriteRenderer spriteRenderer;
@@ -12,11 +13,14 @@ public class Plateform : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        colorToGo = new Color(1, 1, 1);
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    void setColor()
+    void setColor(int newColor)
     {
+        oldColor = color;
+        color = newColor;
         if (color == 0) //Neutral
             colorToGo = new Color(1, 1, 1);
         else if (color == 1) //Red
@@ -33,10 +37,47 @@ public class Plateform : MonoBehaviour {
             colorToGo = new Color(1, 0, 1);
     }
 
+    int getColor()
+    {
+        return (((color == 0 && spriteRenderer.color.r > 0.9 && spriteRenderer.color.g > 0.9 && spriteRenderer.color.b > 0.9)
+            || color != 0) ? color : oldColor);
+    }
+
     // Update is called once per frame
     void FixedUpdate () {
         spriteRenderer.color = Color.Lerp(spriteRenderer.color, colorToGo, fadeSpeed);
-        setColor();
 	}
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (color != -1)
+        {
+            if (collision.gameObject.tag == "Light")
+                setColor(collision.GetComponent<FlashLight>().getColor());
+            else if (collision.gameObject.tag == "Player")
+            {
+                int tmp = getColor();
+                if (tmp == 0)
+                    collision.GetComponent<Player>().Neutral();
+                else if (tmp == 1)
+                    collision.GetComponent<Player>().Red();
+                else if (tmp == 2)
+                    collision.GetComponent<Player>().Orange();
+                else if (tmp == 3)
+                    collision.GetComponent<Player>().Yellow();
+                else if (tmp == 4)
+                    collision.GetComponent<Player>().Green();
+                else if (tmp == 5)
+                    collision.GetComponent<Player>().Blue();
+                else if (tmp == 6)
+                    collision.GetComponent<Player>().Purple();
+            }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (color != -1 && collision.gameObject.tag == "Light")
+            setColor(0);
+    }
 }
