@@ -9,7 +9,8 @@ public class FlashLight : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         render = GetComponent<SpriteRenderer>();
-	}
+        setColor(1, 0, 0);
+    }
 
     void setColor(int r, int g, int b)
     {
