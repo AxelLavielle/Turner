@@ -12,16 +12,17 @@ public class Projo : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (transform.localScale.x != player.transform.localScale.x)
-        {
-            Vector3 newScale = transform.localScale;
-            newScale.x *= player.transform.localScale.x;
-            transform.localScale = newScale;
-        }
         Vector3 diff = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        diff.z = 0.0f;
         diff.Normalize();
 
-        float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0f, 0f, rot_z);
+        if (Player.Instance.facingRight)
+        {
+            transform.right = diff;
+        }
+        else
+        {
+            transform.right = -diff;
+        }
     }
 }
