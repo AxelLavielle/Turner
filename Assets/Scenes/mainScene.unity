@@ -223,6 +223,36 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
+--- !u!1 &127021059 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1068512520496682, guid: 9fefd72e7f0798b4a845af4cf50bb353,
+    type: 2}
+  m_PrefabInternal: {fileID: 2005266923}
+--- !u!61 &127021062
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 127021059}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 55, y: 86}
+    newSize: {x: 0.55, y: 0.86}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 55, y: 86}
+  m_EdgeRadius: 0
 --- !u!1 &284741917
 GameObject:
   m_ObjectHideFlags: 0
@@ -233,6 +263,7 @@ GameObject:
   - component: {fileID: 284741919}
   - component: {fileID: 284741918}
   - component: {fileID: 284741920}
+  - component: {fileID: 284741921}
   m_Layer: 0
   m_Name: Trap
   m_TagString: Death
@@ -320,6 +351,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 993, y: 986}
   m_EdgeRadius: 0
+--- !u!114 &284741921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 284741917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f1e940aaa553bb4197128918554132a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 0
+  fadeSpeed: 0.05
 --- !u!1001 &353842304
 Prefab:
   m_ObjectHideFlags: 0
@@ -1522,7 +1566,30 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 1068512520496682, guid: 9fefd72e7f0798b4a845af4cf50bb353, type: 2}
+      propertyPath: m_TagString
+      value: Death
+      objectReference: {fileID: 0}
+    - target: {fileID: 4292264665900228, guid: 9fefd72e7f0798b4a845af4cf50bb353, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4292264665900228, guid: 9fefd72e7f0798b4a845af4cf50bb353, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 61953133365001622, guid: 9fefd72e7f0798b4a845af4cf50bb353,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 0.0001
+      objectReference: {fileID: 0}
+    - target: {fileID: 61953133365001622, guid: 9fefd72e7f0798b4a845af4cf50bb353,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 0.0001
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 61953133365001622, guid: 9fefd72e7f0798b4a845af4cf50bb353, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 9fefd72e7f0798b4a845af4cf50bb353, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &2017877585
@@ -1535,7 +1602,7 @@ GameObject:
   - component: {fileID: 2017877587}
   - component: {fileID: 2017877586}
   m_Layer: 0
-  m_Name: New Sprite
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
