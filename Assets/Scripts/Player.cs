@@ -71,9 +71,4 @@ public class Player : Body {
         if (collision.gameObject.CompareTag("Death"))
             death();
     }
-
-    private void SeletColor()
-    {
-        
-    }
 }
