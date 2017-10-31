@@ -42,7 +42,7 @@ RenderSettings:
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 11
+  serializedVersion: 9
   m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -54,7 +54,7 @@ LightmapSettings:
     m_EnableBakedLightmaps: 0
     m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
-    serializedVersion: 9
+    serializedVersion: 8
     m_Resolution: 2
     m_BakeResolution: 40
     m_TextureWidth: 1024
@@ -87,7 +87,7 @@ LightmapSettings:
     m_PVRFilteringAtrousNormalSigma: 1
     m_PVRFilteringAtrousPositionSigma: 1
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_ShadowMaskMode: 2
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -222,7 +222,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
-  m_MaskInteraction: 0
 --- !u!1 &284741917
 GameObject:
   m_ObjectHideFlags: 0
@@ -281,7 +280,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
 --- !u!4 &284741919
 Transform:
   m_ObjectHideFlags: 0
@@ -400,11 +398,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4656713162806472, guid: 54d93a5a7b1a9469cbe7ea426601684b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -1161
+      value: -1869
       objectReference: {fileID: 0}
     - target: {fileID: 4656713162806472, guid: 54d93a5a7b1a9469cbe7ea426601684b, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -693
+      value: -667
       objectReference: {fileID: 0}
     - target: {fileID: 4656713162806472, guid: 54d93a5a7b1a9469cbe7ea426601684b, type: 2}
       propertyPath: m_LocalPosition.z
@@ -921,7 +919,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
 --- !u!1 &732613445
 GameObject:
   m_ObjectHideFlags: 0
@@ -1067,7 +1064,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
 --- !u!1001 &912641637
 Prefab:
   m_ObjectHideFlags: 0
@@ -1435,7 +1431,7 @@ Transform:
   m_PrefabInternal: {fileID: 408749068}
   m_GameObject: {fileID: 732613445}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1161, y: -693, z: 0}
+  m_LocalPosition: {x: -1869, y: -667, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 119921163}
