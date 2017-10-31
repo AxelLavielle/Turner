@@ -29,10 +29,21 @@ public class FlashLight : MonoBehaviour {
         else if (Input.GetKeyDown("3"))
             setColor(1, 1, 0);
         Vector3 diff = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        diff.z = 0.0f;
         diff.Normalize();
 
+        if (Player.Instance.facingRight)
+        {
+            transform.right = diff;
+        }
+        else
+        {
+            transform.right = -diff;
+        }
+        /*
         float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0f, 0f, rot_z);
+        */
     }
 
     public int getColor()

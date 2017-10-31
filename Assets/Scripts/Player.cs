@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Player : Body {
 
+    public static Player Instance;
     public bool facingRight = true;
     private Animator anim;
     private Rigidbody2D rgdbd;
@@ -12,6 +13,7 @@ public class Player : Body {
     private bool grounded = false;
     
     private void Start () {
+        Instance = this;
         anim = GetComponent<Animator>();
         rgdbd = GetComponent<Rigidbody2D>();
     }
