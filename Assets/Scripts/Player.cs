@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Player : Body {
 
-    private bool facingRight = true;
+    public bool facingRight = true;
     private Animator anim;
     private Rigidbody2D rgdbd;
     private bool jump = false;
@@ -68,7 +68,7 @@ public class Player : Body {
     {
         if (collision.gameObject.tag == "Floor")
             grounded = true;
-        if (collision.gameObject.CompareTag("Death"))
+        else if (collision.gameObject.tag == "Death")
             death();
     }
 }
