@@ -64,9 +64,8 @@ public class Plateform : MonoBehaviour {
             if (collision.gameObject.tag == "Player")
             {
                 int tmp = getColor();
-                if (tmp == 0)
-                    collision.gameObject.GetComponent<Player>().Neutral();
-                else if (tmp == 1)
+                collision.gameObject.GetComponent<Player>().Neutral();
+                if (tmp == 1)
                     collision.gameObject.GetComponent<Player>().Red();
                 else if (tmp == 2)
                     collision.gameObject.GetComponent<Player>().Orange();
