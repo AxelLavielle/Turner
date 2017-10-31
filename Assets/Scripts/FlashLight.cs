@@ -5,19 +5,19 @@ using UnityEngine;
 public class FlashLight : MonoBehaviour {
 
     public float rotationSpeed;
-    SpriteRenderer renderer;
+    SpriteRenderer render;
 
 	// Use this for initialization
 	void Start () {
         GameObject[] go = GameObject.FindGameObjectsWithTag("Light");
         for (int i = 0; i < go.Length; ++i)
             if (go[i].name == "Light")
-                renderer = go[i].GetComponent<SpriteRenderer>();
+                render = go[i].GetComponent<SpriteRenderer>();
 	}
 
     void setColor(int r, int g, int b)
     {
-        renderer.color = new UnityEngine.Color(r, g, b, 0.5f);
+        render.color = new UnityEngine.Color(r, g, b, 0.5f);
     }
 
 	// Update is called once per frame
@@ -38,17 +38,17 @@ public class FlashLight : MonoBehaviour {
     public int getColor()
     {
         int color = 0;
-        if (renderer.color.r > 0)
+        if (render.color.r > 0)
         {
             color = 1;
-            if (renderer.color.g == 1)
+            if (render.color.g == 1)
                 color += 2;
-            else if (renderer.color.g > 0)
+            else if (render.color.g > 0)
                 color += 1;
-            else if (renderer.color.b > 0)
+            else if (render.color.b > 0)
                 color += 5;
         }
-        else if (renderer.color.g > 0)
+        else if (render.color.g > 0)
             return 4;
         else
             return 5;
