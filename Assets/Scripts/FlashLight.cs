@@ -8,10 +8,7 @@ public class FlashLight : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        GameObject[] go = GameObject.FindGameObjectsWithTag("Light");
-        for (int i = 0; i < go.Length; ++i)
-            if (go[i].name == "Light")
-                render = go[i].GetComponent<SpriteRenderer>();
+        render = GetComponent<SpriteRenderer>();
 	}
 
     void setColor(int r, int g, int b)

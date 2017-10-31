@@ -35,7 +35,6 @@ public class Plateform : MonoBehaviour {
             colorToGo = new Color(0, 0, 1);
         else if (color == 6) //Purple
             colorToGo = new Color(1, 0, 1);
-        spriteRenderer.color = colorToGo;
     }
 
     int getColor()
@@ -49,7 +48,7 @@ public class Plateform : MonoBehaviour {
         spriteRenderer.color = Color.Lerp(spriteRenderer.color, colorToGo, fadeSpeed);
 	}
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (color != -1)
         {
@@ -57,7 +56,6 @@ public class Plateform : MonoBehaviour {
                 setColor(collision.GetComponent<FlashLight>().getColor());
         }
     }
-
 
     private void OnCollisionStay2D(Collision2D collision)
     {

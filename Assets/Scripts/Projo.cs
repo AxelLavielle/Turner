@@ -7,7 +7,7 @@ public class Projo : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        player = GetComponentInParent<Player>();
 	}
 	
 	// Update is called once per frame
@@ -16,13 +16,9 @@ public class Projo : MonoBehaviour {
         diff.z = 0.0f;
         diff.Normalize();
 
-        if (Player.Instance.facingRight)
-        {
+        if (player.facingRight)
             transform.right = diff;
-        }
         else
-        {
             transform.right = -diff;
-        }
     }
 }
