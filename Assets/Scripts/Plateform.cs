@@ -35,6 +35,7 @@ public class Plateform : MonoBehaviour {
             colorToGo = new Color(0, 0, 1);
         else if (color == 6) //Purple
             colorToGo = new Color(1, 0, 1);
+        spriteRenderer.color = colorToGo;
     }
 
     int getColor()
@@ -54,23 +55,31 @@ public class Plateform : MonoBehaviour {
         {
             if (collision.gameObject.tag == "Light")
                 setColor(collision.GetComponent<FlashLight>().getColor());
-            else if (collision.gameObject.tag == "Player")
+        }
+    }
+
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (color != -1)
+        {
+            if (collision.gameObject.tag == "Player")
             {
                 int tmp = getColor();
                 if (tmp == 0)
-                    collision.GetComponent<Player>().Neutral();
+                    collision.gameObject.GetComponent<Player>().Neutral();
                 else if (tmp == 1)
-                    collision.GetComponent<Player>().Red();
+                    collision.gameObject.GetComponent<Player>().Red();
                 else if (tmp == 2)
-                    collision.GetComponent<Player>().Orange();
+                    collision.gameObject.GetComponent<Player>().Orange();
                 else if (tmp == 3)
-                    collision.GetComponent<Player>().Yellow();
+                    collision.gameObject.GetComponent<Player>().Yellow();
                 else if (tmp == 4)
-                    collision.GetComponent<Player>().Green();
+                    collision.gameObject.GetComponent<Player>().Green();
                 else if (tmp == 5)
-                    collision.GetComponent<Player>().Blue();
+                    collision.gameObject.GetComponent<Player>().Blue();
                 else if (tmp == 6)
-                    collision.GetComponent<Player>().Purple();
+                    collision.gameObject.GetComponent<Player>().Purple();
             }
         }
     }
