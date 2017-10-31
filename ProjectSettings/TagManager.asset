@@ -7,6 +7,7 @@ TagManager:
   - Floor
   - Light
   - Trap
+  - Death
   layers:
   - Default
   - TransparentFX

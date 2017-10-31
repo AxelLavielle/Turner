@@ -68,6 +68,8 @@ public class Player : Body {
     {
         if (collision.gameObject.tag == "Floor")
             grounded = true;
+        if (collision.gameObject.CompareTag("Death"))
+            death();
     }
 
     private void SeletColor()
