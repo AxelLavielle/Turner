@@ -54,8 +54,7 @@ public class Body : MonoBehaviour {
 
     public void Blue()
     {
-        if (GetComponent<Rigidbody2D>().gravityScale == gravity)
-            GetComponent<Rigidbody2D>().gravityScale /= 2;
+        GetComponent<Rigidbody2D>().AddForce(Vector2.up * 10000, ForceMode2D.Force);
     }
 
     public void Purple()
