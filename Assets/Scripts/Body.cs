@@ -12,7 +12,13 @@ public class Body : MonoBehaviour {
     private float gravity;
     private float originalJumpForce;
 
+    protected int direction = -1;
+
+    protected bool grounded = false;
+
+    [SerializeField]
     protected float moveForce;
+    [SerializeField]
     protected float jumpForce;
 
 
@@ -49,7 +55,12 @@ public class Body : MonoBehaviour {
 
     public void Green()
     {
-        moveForce = 0;
+        if (grounded)
+        {
+            moveForce = 0;
+            GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            GetComponent<Rigidbody2D>().gravityScale = 0;
+        }
     }
 
     public void Blue()
@@ -59,7 +70,11 @@ public class Body : MonoBehaviour {
 
     public void Purple()
     {
-        moveForce = moveForceNeutral / 2;
+        float temp = transform.position.x - GameObject.FindGameObjectWithTag("Player").transform.position.x;
+        if (temp < 0)
+            direction = -1;
+        else
+            direction = 1;
     }
 
 }

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : Body {
-    int direction = -1;
     Rigidbody2D Rigidbody;
     Vector2 oldPosition;
     bool idle = true;

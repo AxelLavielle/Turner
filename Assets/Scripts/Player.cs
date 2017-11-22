@@ -9,7 +9,6 @@ public class Player : Body {
     private Animator anim;
     private Rigidbody2D rgdbd;
     private bool jump = false;
-    private bool grounded = false;
     
     private void Start () {
         anim = GetComponent<Animator>();
