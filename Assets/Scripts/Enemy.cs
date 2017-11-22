@@ -32,7 +32,6 @@ public class Enemy : MonoBehaviour {
     void FixedUpdate () {
         if (!idle)
         {
-            print(Rigidbody.velocity);
             if (Rigidbody.velocity.y < -0.0001)
             {
                 Flip();
