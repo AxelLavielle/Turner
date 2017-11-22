@@ -1045,8 +1045,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveForceNeutral: 7
   jumpForceNeutral: 500
-  moveForce: 7
-  jumpForce: 500
   facingRight: 1
 --- !u!50 &732613448
 Rigidbody2D:
@@ -1602,6 +1600,11 @@ Prefab:
         type: 2}
       propertyPath: m_Constraints
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114922723510765806, guid: 9fefd72e7f0798b4a845af4cf50bb353,
+        type: 2}
+      propertyPath: moveForceNeutral
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 61953133365001622, guid: 9fefd72e7f0798b4a845af4cf50bb353, type: 2}

@@ -2,20 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour {
-    [SerializeField]
-    Vector2 offset;
-    [SerializeField]
-    float speed;
+public class Enemy : Body {
     int direction = -1;
-    BoxCollider2D box;
     Rigidbody2D Rigidbody;
     Vector2 oldPosition;
     bool idle = true;
 
 	// Use this for initialization
 	void Start () {
-        box = GetComponent<BoxCollider2D>();
         Rigidbody = GetComponent<Rigidbody2D>();
         oldPosition = transform.position;
     }
@@ -39,7 +33,7 @@ public class Enemy : MonoBehaviour {
                 transform.position = oldPosition;
             }
             oldPosition = transform.position;
-            transform.position = new Vector2(transform.position.x + speed * direction, transform.position.y);
+            transform.position = new Vector2(transform.position.x + moveForce * direction, transform.position.y);
         }
     }
 

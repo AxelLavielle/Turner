@@ -12,15 +12,15 @@ public class Body : MonoBehaviour {
     private float gravity;
     private float originalJumpForce;
 
-    [SerializeField]
     protected float moveForce;
-    [SerializeField]
     protected float jumpForce;
 
 
     private void Awake()
     {
-        originalJumpForce = jumpForce;
+        moveForce = moveForceNeutral;
+        jumpForce = jumpForceNeutral;
+        originalJumpForce = jumpForceNeutral;
         gravity = GetComponent<Rigidbody2D>().gravityScale;
     }
 

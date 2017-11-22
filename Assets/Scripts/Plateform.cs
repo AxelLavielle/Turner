@@ -61,22 +61,23 @@ public class Plateform : MonoBehaviour {
     {
         if (color != -1)
         {
-            if (collision.gameObject.tag == "Player")
+            Body tmpBody = collision.gameObject.GetComponent<Body>();
+            if (tmpBody != null)
             {
                 int tmp = getColor();
-                collision.gameObject.GetComponent<Player>().Neutral();
+                tmpBody.Neutral();
                 if (tmp == 1)
-                    collision.gameObject.GetComponent<Player>().Red();
+                    tmpBody.Red();
                 else if (tmp == 2)
-                    collision.gameObject.GetComponent<Player>().Orange();
+                    tmpBody.Orange();
                 else if (tmp == 3)
-                    collision.gameObject.GetComponent<Player>().Yellow();
+                    tmpBody.Yellow();
                 else if (tmp == 4)
-                    collision.gameObject.GetComponent<Player>().Green();
+                    tmpBody.Green();
                 else if (tmp == 5)
-                    collision.gameObject.GetComponent<Player>().Blue();
+                    tmpBody.Blue();
                 else if (tmp == 6)
-                    collision.gameObject.GetComponent<Player>().Purple();
+                    tmpBody.Purple();
             }
         }
     }
