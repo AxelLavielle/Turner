@@ -70,4 +70,10 @@ public class Player : Body {
         else if (collision.gameObject.tag == "Death")
             death();
     }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Floor")
+            grounded = false;
+    }
 }

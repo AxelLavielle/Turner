@@ -14,7 +14,7 @@ public class Body : MonoBehaviour {
 
     protected int direction = -1;
 
-    protected bool grounded = false;
+    public bool grounded = false;
 
     [SerializeField]
     protected float moveForce;
@@ -65,7 +65,8 @@ public class Body : MonoBehaviour {
 
     public void Blue()
     {
-        GetComponent<Rigidbody2D>().AddForce(Vector2.up * 10000, ForceMode2D.Force);
+        transform.localPosition = new Vector3(gameObject.transform.localPosition.x, -400, gameObject.transform.localPosition.z);
+        GetComponent<Rigidbody2D>().gravityScale = 0;
     }
 
     public void Purple()
@@ -76,5 +77,6 @@ public class Body : MonoBehaviour {
         else
             direction = 1;
     }
+
 
 }

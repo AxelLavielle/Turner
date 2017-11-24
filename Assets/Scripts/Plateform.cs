@@ -37,7 +37,7 @@ public class Plateform : MonoBehaviour {
             colorToGo = new Color(1, 0, 1);
     }
 
-    int getColor()
+    public int getColor()
     {
         return (((color == 0 && spriteRenderer.color.r > 0.9 && spriteRenderer.color.g > 0.9 && spriteRenderer.color.b > 0.9)
             || color != 0) ? color : oldColor);
@@ -74,8 +74,6 @@ public class Plateform : MonoBehaviour {
                     tmpBody.Yellow();
                 else if (tmp == 4)
                     tmpBody.Green();
-                else if (tmp == 5)
-                    tmpBody.Blue();
                 else if (tmp == 6)
                     tmpBody.Purple();
             }
@@ -85,6 +83,11 @@ public class Plateform : MonoBehaviour {
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (color != -1 && collision.gameObject.tag == "Light")
+        {
             setColor(0);
+        }
     }
+
+
+
 }
