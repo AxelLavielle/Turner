@@ -6,11 +6,16 @@ public class Enemy : Body {
     Rigidbody2D Rigidbody;
     Vector2 oldPosition;
     bool idle = true;
+    public GameObject bullet;
+    float timer;
+    bool isFlip;
 
 	// Use this for initialization
 	void Start () {
         Rigidbody = GetComponent<Rigidbody2D>();
         oldPosition = transform.position;
+        timer = 0f;
+        isFlip = false;
     }
 
     private void Flip()
@@ -19,6 +24,7 @@ public class Enemy : Body {
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;
+        isFlip = !isFlip;
     }
 
     // Update is called once per frame
@@ -34,6 +40,10 @@ public class Enemy : Body {
             oldPosition = transform.position;
             transform.position = new Vector2(transform.position.x + moveForce * direction, transform.position.y);
         }
+
+
+        timer += Time.deltaTime;
+        Shoot();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -44,4 +54,19 @@ public class Enemy : Body {
         }
     }
 
+    private void Shoot() {
+        if (timer > 4f && Vector2.Distance(transform.position, GameObject.Find("Player").transform.position) < 400)
+        {
+            GameObject tempBullet = Instantiate(bullet, GameObject.Find("Muzzle").transform.position, Quaternion.identity) as GameObject;
+            timer = 0f;
+            Vector2 direction = new Vector2(-transform.right.x, 0);
+            if(isFlip) {
+                direction.x = transform.right.x;
+            }              
+                
+            tempBullet.GetComponent<Rigidbody2D>().AddForce(direction * 30000);
+            Destroy(tempBullet, 3f);
+
+        }
+    }
 }
