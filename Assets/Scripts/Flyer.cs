@@ -16,17 +16,11 @@ public class Flyer : MonoBehaviour {
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        Debug.Log("E");
         if (collision.gameObject.tag == "Floor")
         {
-            if (collision.gameObject.GetComponent<Plateform>().getColor() == 0)
-            {
-                transform.parent.gameObject.GetComponent<Body>().Neutral();
-            }
-
             if (collision.gameObject.GetComponent<Plateform>().getColor() == 5)
             {
-                transform.parent.gameObject.GetComponent<Body>().Blue();
+                transform.parent.gameObject.GetComponent<Body>().Blue(transform.position.y - collision.gameObject.transform.position.y);
             }
         }
     }

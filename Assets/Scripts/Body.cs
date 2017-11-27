@@ -12,7 +12,7 @@ public class Body : MonoBehaviour {
     private float gravity;
     private float originalJumpForce;
 
-    protected int direction = -1;
+    public int direction = -1;
 
     public bool grounded = false;
 
@@ -63,19 +63,28 @@ public class Body : MonoBehaviour {
         }
     }
 
-    public void Blue()
+    public void Blue(float dist)
     {
-        transform.localPosition = new Vector3(gameObject.transform.localPosition.x, -400, gameObject.transform.localPosition.z);
-        GetComponent<Rigidbody2D>().gravityScale = 0;
+        GetComponent<Rigidbody2D>().AddForce(Vector2.up * ((150 - dist) * 30));
     }
 
     public void Purple()
     {
         float temp = transform.position.x - GameObject.FindGameObjectWithTag("Player").transform.position.x;
-        if (temp < 0)
-            direction = -1;
-        else
-            direction = 1;
+        Enemy enemy = GetComponent<Enemy>();
+        if (enemy != null)
+        {
+            if (temp < 0 && direction == 1)
+            {
+                direction = -1;
+                enemy.idle = false;
+            }
+            else if (temp > 0 && direction == -1)
+            {
+                direction = 0;
+                enemy.idle = false;
+            }
+        }
     }
 
 
