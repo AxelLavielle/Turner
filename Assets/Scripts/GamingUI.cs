@@ -6,14 +6,19 @@ using UnityEngine.UI;
 public class GamingUI : MonoBehaviour {
     private float timer;
     private int score;
+    private int life;
     public Text timerText;
     public Text scoreText;
+    public Text lifeText;
     public GameObject pauseMenu;
+    Player player;
 
 	// Use this for initialization
     void Start () {
         timer = 0f;
         score = 0;
+        player = GameObject.Find("Player").GetComponent<Player>();
+        life = player.life;
 		
 	}
 	
@@ -21,6 +26,7 @@ public class GamingUI : MonoBehaviour {
 	void Update () {
         TimerText();
         ScoreText();
+        LifeText();
 	}
 
     private void TimerText()
@@ -34,9 +40,18 @@ public class GamingUI : MonoBehaviour {
         scoreText.text = "Score: " + score;
     }
 
+    private void LifeText()
+    {
+        lifeText.text = "Life: " + life.ToString();
+    }
+
     public void Pause()
     {
         Instantiate(pauseMenu, Vector3.zero, Quaternion.identity);
         Time.timeScale = 0;
+    }
+
+    public void setScore() {
+        
     }
 }
