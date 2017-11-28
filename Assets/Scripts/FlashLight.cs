@@ -65,7 +65,7 @@ public class FlashLight : MonoBehaviour {
             rend1.material.color = last1;
             rend2.material.color = last2;
         }
-        else if (Input.GetKeyDown("e") && colorNumber > 3)
+        else if (Input.GetKeyDown("e") && colorNumber > 1)
             Mix();
     }
 
@@ -112,6 +112,8 @@ public class FlashLight : MonoBehaviour {
             else if (last1 == Color.blue)
                 g = 1;
         }
+        Debug.Log(last1);
+        Debug.Log(last2);
         setColor(r, g, b);
     }
 
