@@ -12,12 +12,26 @@ public class FlashLight : MonoBehaviour {
     Renderer rend1;
     Renderer rend2;
 
+    private int colorNumber = 0;
     // Use this for initialization
-    void Start () {
+    void Awake () {
         render = GetComponent<SpriteRenderer>();
         rend1 = GameObject.FindGameObjectWithTag("Last1").GetComponent<Renderer>();
         rend2 = GameObject.FindGameObjectWithTag("Last2").GetComponent<Renderer>();
+        if (colorNumber == 0)
+            render.color = new UnityEngine.Color(1, 0, 0, 0);
+    }
+
+    public void addColor(int i)
+    {
+        print("adding color");
+        colorNumber += i;
         setColor(1, 0, 0);
+    }
+
+    public int getColorNb()
+    {
+        return colorNumber;
     }
 
     void setColor(float r, float g, float b)
@@ -52,6 +66,32 @@ public class FlashLight : MonoBehaviour {
             rend2.material.color = last2;
         }
         else if (Input.GetKeyDown("e"))
+            Mix();
+        if (Input.GetKeyDown("1") && colorNumber > 0)
+        {
+            setColor(1, 0, 0);
+            last2 = last1;
+            last1 = Color.red;
+            rend1.material.color = last1;
+            rend2.material.color = last2;
+        }
+        else if (Input.GetKeyDown("2") && colorNumber > 1)
+        {
+            setColor(0, 0, 1);
+            last2 = last1;
+            last1 = Color.blue;
+            rend1.material.color = last1;
+            rend2.material.color = last2;
+        }
+        else if (Input.GetKeyDown("3") && colorNumber > 2)
+        {
+            setColor(1, 1, 0);
+            last2 = last1;
+            last1 = Color.yellow;
+            rend1.material.color = last1;
+            rend2.material.color = last2;
+        }
+        else if (Input.GetKeyDown("e") && colorNumber > 3)
             Mix();
     }
 
@@ -103,6 +143,8 @@ public class FlashLight : MonoBehaviour {
 
     public int getColor()
     {
+        if (colorNumber == 0)
+            return 0;
         int color = 0;
         if (render.color.r > 0)
         {
