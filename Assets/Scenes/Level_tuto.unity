@@ -51,8 +51,8 @@ LightmapSettings:
     m_AlbedoBoost: 1
     m_TemporalCoherenceThreshold: 1
     m_EnvironmentLightingMode: 0
-    m_EnableBakedLightmaps: 0
-    m_EnableRealtimeLightmaps: 0
+    m_EnableBakedLightmaps: 1
+    m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
     serializedVersion: 8
     m_Resolution: 2
@@ -180,6 +180,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &9004857
 SpriteRenderer:
@@ -295,6 +299,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &17264360
 SpriteRenderer:
@@ -483,6 +491,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &43158382
 SpriteRenderer:
@@ -598,6 +610,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &71400654
 SpriteRenderer:
@@ -713,6 +729,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &82041858
 SpriteRenderer:
@@ -828,6 +848,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &83801342
 SpriteRenderer:
@@ -983,6 +1007,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &95344025
 SpriteRenderer:
@@ -1098,6 +1126,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &98842347
 SpriteRenderer:
@@ -1213,6 +1245,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &99078369
 SpriteRenderer:
@@ -1328,6 +1364,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &101638205
 SpriteRenderer:
@@ -1444,6 +1484,52 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+--- !u!1001 &123243879
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 634252693}
+    m_Modifications:
+    - target: {fileID: 4682235812813220, guid: 8a48b0863e36d9740b7ebf53065ff856, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -489.77167
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682235812813220, guid: 8a48b0863e36d9740b7ebf53065ff856, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 579
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682235812813220, guid: 8a48b0863e36d9740b7ebf53065ff856, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682235812813220, guid: 8a48b0863e36d9740b7ebf53065ff856, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682235812813220, guid: 8a48b0863e36d9740b7ebf53065ff856, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682235812813220, guid: 8a48b0863e36d9740b7ebf53065ff856, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682235812813220, guid: 8a48b0863e36d9740b7ebf53065ff856, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682235812813220, guid: 8a48b0863e36d9740b7ebf53065ff856, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1336755720320844, guid: 8a48b0863e36d9740b7ebf53065ff856, type: 2}
+      propertyPath: m_Name
+      value: UpTiles (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 8a48b0863e36d9740b7ebf53065ff856, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &124203270
 GameObject:
   m_ObjectHideFlags: 0
@@ -1484,6 +1570,56 @@ Transform:
   m_Father: {fileID: 696152776}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &142583441
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 886393725}
+    m_Modifications:
+    - target: {fileID: 4682235812813220, guid: 8a48b0863e36d9740b7ebf53065ff856, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2329.713
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682235812813220, guid: 8a48b0863e36d9740b7ebf53065ff856, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 234
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682235812813220, guid: 8a48b0863e36d9740b7ebf53065ff856, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682235812813220, guid: 8a48b0863e36d9740b7ebf53065ff856, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682235812813220, guid: 8a48b0863e36d9740b7ebf53065ff856, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682235812813220, guid: 8a48b0863e36d9740b7ebf53065ff856, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682235812813220, guid: 8a48b0863e36d9740b7ebf53065ff856, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682235812813220, guid: 8a48b0863e36d9740b7ebf53065ff856, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1336755720320844, guid: 8a48b0863e36d9740b7ebf53065ff856, type: 2}
+      propertyPath: m_Name
+      value: UpTiles (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1336755720320844, guid: 8a48b0863e36d9740b7ebf53065ff856, type: 2}
+      propertyPath: m_TagString
+      value: lvlend
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 8a48b0863e36d9740b7ebf53065ff856, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &143704384
 GameObject:
   m_ObjectHideFlags: 0
@@ -1556,6 +1692,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &143704388
 SpriteRenderer:
@@ -1717,6 +1857,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &171904001
 SpriteRenderer:
@@ -1832,6 +1976,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &189171654
 SpriteRenderer:
@@ -2105,7 +2253,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4956827938443324, guid: e4093ff44f5b24c4f89a39e5524ae00e, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e4093ff44f5b24c4f89a39e5524ae00e, type: 2}
@@ -2328,6 +2476,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &348852228
 SpriteRenderer:
@@ -2516,6 +2668,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &367878802
 SpriteRenderer:
@@ -2923,6 +3079,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &416963051
 SpriteRenderer:
@@ -3038,6 +3198,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &416980347
 SpriteRenderer:
@@ -3081,6 +3245,11 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+--- !u!4 &432344923 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4682235812813220, guid: 8a48b0863e36d9740b7ebf53065ff856,
+    type: 2}
+  m_PrefabInternal: {fileID: 123243879}
 --- !u!1 &453163526
 GameObject:
   m_ObjectHideFlags: 0
@@ -3153,6 +3322,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &453163530
 SpriteRenderer:
@@ -3268,6 +3441,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &460111768
 SpriteRenderer:
@@ -3498,6 +3675,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &466487419
 SpriteRenderer:
@@ -3786,11 +3967,11 @@ RectTransform:
   - {fileID: 1944524734}
   - {fileID: 1881302039}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2340, y: -3}
+  m_AnchoredPosition: {x: 2340, y: -46}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &520835852
@@ -3905,6 +4086,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &523575206
 SpriteRenderer:
@@ -4312,6 +4497,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &598751496
 SpriteRenderer:
@@ -4525,7 +4714,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 610463198}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -81.18878, z: 10}
+  m_LocalPosition: {x: 0, y: -81, z: 10}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children:
   - {fileID: 1561007023}
@@ -4642,6 +4831,7 @@ Transform:
   - {fileID: 502934875}
   - {fileID: 1893159673}
   - {fileID: 1279153760}
+  - {fileID: 432344923}
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5091,6 +5281,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &714023691
 SpriteRenderer:
@@ -5206,6 +5400,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &718908854
 SpriteRenderer:
@@ -5686,6 +5884,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &767164197
 SpriteRenderer:
@@ -5874,6 +6076,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &782072061
 SpriteRenderer:
@@ -6071,6 +6277,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &796376456
 SpriteRenderer:
@@ -6186,6 +6396,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &800508598
 SpriteRenderer:
@@ -6633,6 +6847,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &846438030
 SpriteRenderer:
@@ -6894,6 +7112,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &862057785
 SpriteRenderer:
@@ -6946,7 +7168,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4178428417537568, guid: 4ff7dc6e59accc74bbfb740a4e18dec3, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -790.0218
+      value: -977
       objectReference: {fileID: 0}
     - target: {fileID: 4178428417537568, guid: 4ff7dc6e59accc74bbfb740a4e18dec3, type: 2}
       propertyPath: m_LocalPosition.y
@@ -7052,6 +7274,37 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+--- !u!1 &886393724
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 886393725}
+  m_Layer: 0
+  m_Name: EndWall
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &886393725
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 886393724}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 922.28705, y: 215.14609, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1774377317}
+  - {fileID: 1067008656}
+  - {fileID: 2044140330}
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &905390997
 GameObject:
   m_ObjectHideFlags: 0
@@ -7124,6 +7377,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &905391001
 SpriteRenderer:
@@ -7239,6 +7496,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &932294095
 SpriteRenderer:
@@ -7354,6 +7615,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &956735065
 SpriteRenderer:
@@ -7469,6 +7734,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &979408994
 SpriteRenderer:
@@ -7730,6 +7999,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &1032240737
 SpriteRenderer:
@@ -7773,6 +8046,11 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+--- !u!4 &1067008656 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4682235812813220, guid: 8a48b0863e36d9740b7ebf53065ff856,
+    type: 2}
+  m_PrefabInternal: {fileID: 1506808800}
 --- !u!1 &1089341495
 GameObject:
   m_ObjectHideFlags: 0
@@ -7845,6 +8123,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &1089341499
 SpriteRenderer:
@@ -8179,6 +8461,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &1132139913
 SpriteRenderer:
@@ -8340,6 +8626,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &1142006547
 SpriteRenderer:
@@ -8601,6 +8891,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &1188808262
 SpriteRenderer:
@@ -8756,6 +9050,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &1202225427
 SpriteRenderer:
@@ -9130,6 +9428,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &1227383079
 SpriteRenderer:
@@ -9588,6 +9890,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &1282482302
 SpriteRenderer:
@@ -10041,6 +10347,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &1334533002
 SpriteRenderer:
@@ -10156,6 +10466,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &1363269544
 SpriteRenderer:
@@ -10271,6 +10585,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &1364308891
 SpriteRenderer:
@@ -10386,6 +10704,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &1393051424
 SpriteRenderer:
@@ -10541,6 +10863,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &1403617690
 SpriteRenderer:
@@ -10729,6 +11055,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &1408097596
 SpriteRenderer:
@@ -10844,6 +11174,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &1425766318
 SpriteRenderer:
@@ -10999,6 +11333,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &1434025456
 SpriteRenderer:
@@ -11187,6 +11525,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &1475813505
 SpriteRenderer:
@@ -11230,6 +11572,76 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+--- !u!1001 &1506808800
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 886393725}
+    m_Modifications:
+    - target: {fileID: 4682235812813220, guid: 8a48b0863e36d9740b7ebf53065ff856, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2329.713
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682235812813220, guid: 8a48b0863e36d9740b7ebf53065ff856, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -342
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682235812813220, guid: 8a48b0863e36d9740b7ebf53065ff856, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682235812813220, guid: 8a48b0863e36d9740b7ebf53065ff856, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682235812813220, guid: 8a48b0863e36d9740b7ebf53065ff856, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682235812813220, guid: 8a48b0863e36d9740b7ebf53065ff856, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682235812813220, guid: 8a48b0863e36d9740b7ebf53065ff856, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682235812813220, guid: 8a48b0863e36d9740b7ebf53065ff856, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1336755720320844, guid: 8a48b0863e36d9740b7ebf53065ff856, type: 2}
+      propertyPath: m_Name
+      value: UpTiles (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1888815487930362, guid: 8a48b0863e36d9740b7ebf53065ff856, type: 2}
+      propertyPath: m_TagString
+      value: lvlend
+      objectReference: {fileID: 0}
+    - target: {fileID: 1025549837028814, guid: 8a48b0863e36d9740b7ebf53065ff856, type: 2}
+      propertyPath: m_TagString
+      value: lvlend
+      objectReference: {fileID: 0}
+    - target: {fileID: 1279072922606982, guid: 8a48b0863e36d9740b7ebf53065ff856, type: 2}
+      propertyPath: m_TagString
+      value: lvlend
+      objectReference: {fileID: 0}
+    - target: {fileID: 1236812005332302, guid: 8a48b0863e36d9740b7ebf53065ff856, type: 2}
+      propertyPath: m_TagString
+      value: lvlend
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699556052268710, guid: 8a48b0863e36d9740b7ebf53065ff856, type: 2}
+      propertyPath: m_TagString
+      value: lvlend
+      objectReference: {fileID: 0}
+    - target: {fileID: 1815216713528484, guid: 8a48b0863e36d9740b7ebf53065ff856, type: 2}
+      propertyPath: m_TagString
+      value: lvlend
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 8a48b0863e36d9740b7ebf53065ff856, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1549279119
 GameObject:
   m_ObjectHideFlags: 0
@@ -11302,6 +11714,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &1549279123
 SpriteRenderer:
@@ -11417,6 +11833,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &1561007026
 SpriteRenderer:
@@ -11532,6 +11952,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &1572496535
 SpriteRenderer:
@@ -12052,6 +12476,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &1617075803
 SpriteRenderer:
@@ -12167,6 +12595,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &1625884963
 SpriteRenderer:
@@ -12355,6 +12787,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &1668118602
 SpriteRenderer:
@@ -12470,6 +12906,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &1669659231
 SpriteRenderer:
@@ -12585,6 +13025,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &1681279440
 SpriteRenderer:
@@ -12773,6 +13217,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &1708188439
 SpriteRenderer:
@@ -12816,6 +13264,56 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+--- !u!1001 &1725448025
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 886393725}
+    m_Modifications:
+    - target: {fileID: 4682235812813220, guid: 8a48b0863e36d9740b7ebf53065ff856, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2329.713
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682235812813220, guid: 8a48b0863e36d9740b7ebf53065ff856, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -54
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682235812813220, guid: 8a48b0863e36d9740b7ebf53065ff856, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682235812813220, guid: 8a48b0863e36d9740b7ebf53065ff856, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682235812813220, guid: 8a48b0863e36d9740b7ebf53065ff856, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682235812813220, guid: 8a48b0863e36d9740b7ebf53065ff856, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682235812813220, guid: 8a48b0863e36d9740b7ebf53065ff856, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682235812813220, guid: 8a48b0863e36d9740b7ebf53065ff856, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1336755720320844, guid: 8a48b0863e36d9740b7ebf53065ff856, type: 2}
+      propertyPath: m_Name
+      value: UpTiles (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1336755720320844, guid: 8a48b0863e36d9740b7ebf53065ff856, type: 2}
+      propertyPath: m_TagString
+      value: lvlend
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 8a48b0863e36d9740b7ebf53065ff856, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1732321772
 GameObject:
   m_ObjectHideFlags: 0
@@ -12961,6 +13459,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &1745213267
 SpriteRenderer:
@@ -13225,7 +13727,7 @@ RectTransform:
   - {fileID: 279516318}
   - {fileID: 87130845}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -13305,6 +13807,11 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+--- !u!4 &1774377317 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4682235812813220, guid: 8a48b0863e36d9740b7ebf53065ff856,
+    type: 2}
+  m_PrefabInternal: {fileID: 1725448025}
 --- !u!4 &1785471252 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4178428417537568, guid: 4ff7dc6e59accc74bbfb740a4e18dec3,
@@ -13455,6 +13962,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &1800781093
 SpriteRenderer:
@@ -13570,6 +14081,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &1828774513
 SpriteRenderer:
@@ -13904,6 +14419,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &1874734541
 SpriteRenderer:
@@ -14019,6 +14538,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &1879084049
 SpriteRenderer:
@@ -14174,6 +14697,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &1883504550
 SpriteRenderer:
@@ -14409,6 +14936,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &1906072739
 SpriteRenderer:
@@ -14524,6 +15055,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &1919104100
 SpriteRenderer:
@@ -14639,6 +15174,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &1921903839
 SpriteRenderer:
@@ -14827,6 +15366,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &1934121607
 SpriteRenderer:
@@ -14942,6 +15485,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &1937759270
 SpriteRenderer:
@@ -15097,6 +15644,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &1972031142
 SpriteRenderer:
@@ -15285,6 +15836,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &1981837124
 SpriteRenderer:
@@ -15400,6 +15955,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &1991848100
 SpriteRenderer:
@@ -15588,6 +16147,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &1996587522
 SpriteRenderer:
@@ -15777,6 +16340,11 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+--- !u!4 &2044140330 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4682235812813220, guid: 8a48b0863e36d9740b7ebf53065ff856,
+    type: 2}
+  m_PrefabInternal: {fileID: 142583441}
 --- !u!1 &2046310098
 GameObject:
   m_ObjectHideFlags: 0
@@ -15849,6 +16417,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &2046310102
 SpriteRenderer:
@@ -15996,6 +16568,8 @@ MonoBehaviour:
   dampTime: 0.1
   target: {fileID: 1785471252}
   cameraPositionThresholdY: 0
+  cameraPositionThresholdX: -243
+  cameraPositionThresholdMaxX: 2290
 --- !u!1 &2083091939
 GameObject:
   m_ObjectHideFlags: 0
@@ -16108,6 +16682,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &2086094183
 SpriteRenderer:
@@ -16223,6 +16801,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &2090218267
 SpriteRenderer:
@@ -16411,6 +16993,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &2101653948
 SpriteRenderer:
@@ -16599,6 +17185,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &2113528113
 SpriteRenderer:
