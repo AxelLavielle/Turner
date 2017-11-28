@@ -289,7 +289,6 @@ GameObject:
   - component: {fileID: 224672975145780466}
   - component: {fileID: 222675158406099562}
   - component: {fileID: 114869405605200022}
-  - component: {fileID: 4958819581986870}
   m_Layer: 0
   m_Name: longFloor
   m_TagString: Untagged
@@ -1355,19 +1354,6 @@ Transform:
   m_Father: {fileID: 224672975145780466}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4958819581986870
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1260951265625138}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1207, y: -333, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4965801260306072
 Transform:
   m_ObjectHideFlags: 1
@@ -1906,6 +1892,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!114 &114142430730413146
 MonoBehaviour:
@@ -1919,6 +1909,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!114 &114187315211320788
 MonoBehaviour:
@@ -1932,6 +1926,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!114 &114222720610741516
 MonoBehaviour:
@@ -1945,6 +1943,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!114 &114294060872056622
 MonoBehaviour:
@@ -1958,6 +1960,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!114 &114306488145590076
 MonoBehaviour:
@@ -1971,6 +1977,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!114 &114351022646238392
 MonoBehaviour:
@@ -1984,6 +1994,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!114 &114393195833181606
 MonoBehaviour:
@@ -1997,6 +2011,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!114 &114406866815246012
 MonoBehaviour:
@@ -2010,6 +2028,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!114 &114438772489427554
 MonoBehaviour:
@@ -2023,6 +2045,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!114 &114491267121222436
 MonoBehaviour:
@@ -2036,6 +2062,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!114 &114536114586081612
 MonoBehaviour:
@@ -2049,6 +2079,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!114 &114544997568896188
 MonoBehaviour:
@@ -2062,6 +2096,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!114 &114557265668586312
 MonoBehaviour:
@@ -2075,6 +2113,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!114 &114737366839684754
 MonoBehaviour:
@@ -2088,6 +2130,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!114 &114772735190225870
 MonoBehaviour:
@@ -2101,6 +2147,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!114 &114831528350517622
 MonoBehaviour:
@@ -2114,6 +2164,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!114 &114841864720080108
 MonoBehaviour:
@@ -2127,6 +2181,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!114 &114863006425010770
 MonoBehaviour:
@@ -2140,6 +2198,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!114 &114869405605200022
 MonoBehaviour:
@@ -2186,6 +2248,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!212 &212004629350617274
 SpriteRenderer:
@@ -3852,6 +3918,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -246.73799, y: -333.81122}
+  m_AnchoredPosition: {x: -1207, y: -333}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}

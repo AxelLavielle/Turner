@@ -12,6 +12,9 @@ TagManager:
   - Floor_End
   - Last1
   - Last2
+  - lvlend
+  - BluePickup
+  - ColorPickup
   layers:
   - Default
   - TransparentFX
