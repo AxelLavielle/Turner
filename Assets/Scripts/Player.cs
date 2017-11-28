@@ -70,7 +70,11 @@ public class Player : Body {
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Floor")
+        {
             grounded = true;
+            Vector2 vel = rgdbd.velocity;
+            rgdbd.velocity = vel;
+        }
         else if (collision.gameObject.tag == "Death" || collision.gameObject.tag == "Trap")
             death();
         else if (collision.gameObject.tag == "lvlend")
