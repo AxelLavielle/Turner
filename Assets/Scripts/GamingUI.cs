@@ -18,6 +18,7 @@ public class GamingUI : MonoBehaviour {
         timer = 0f;
         score = 0;
         player = GameObject.Find("Player").GetComponent<Player>();
+        life = player.life;
 		
 	}
 	
@@ -41,7 +42,6 @@ public class GamingUI : MonoBehaviour {
 
     private void LifeText()
     {
-        life = player.life;
         lifeText.text = "Life: " + life.ToString();
     }
 

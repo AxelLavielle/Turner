@@ -12,14 +12,10 @@ public class Player : Body {
     private bool jump = false;
     public int life;
     public GameObject gameoverMenu;
-    private bool gameover;
-    private Vector3 startPos;   // Start Position
     
     private void Start () {
         anim = GetComponent<Animator>();
         rgdbd = GetComponent<Rigidbody2D>();
-        startPos = transform.position;
-        gameover = false;
     }
 
     private void Flip()
@@ -70,9 +66,8 @@ public class Player : Body {
 
     private void death()
     {
-        transform.position = startPos;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         life--;
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
     }
 
@@ -92,10 +87,9 @@ public class Player : Body {
 
     private void GameOver()
     {
-        if(life <= 0 && !gameover) {
+        if(life <= 0) {
             Time.timeScale = 0;
             Instantiate(gameoverMenu, Vector3.zero, Quaternion.identity);
-            gameover = true;
         }
     }
 
