@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Player : Body {
 
@@ -9,10 +10,16 @@ public class Player : Body {
     private Animator anim;
     private Rigidbody2D rgdbd;
     private bool jump = false;
+    private float timer;
+    private int score;
+    public Text timerText;
+    public Text scoreText;
     
     private void Start () {
         anim = GetComponent<Animator>();
         rgdbd = GetComponent<Rigidbody2D>();
+        timer = 0f;
+        score = 0;
     }
 
     private void Flip()
@@ -50,7 +57,12 @@ public class Player : Body {
     private void Update()
     {
         if (Input.GetButtonDown("Jump"))
-            jump = true;
+        { 
+            jump = true; 
+        }
+
+        TimerText();
+        ScoreText();
     }
 
     private void FixedUpdate()
@@ -75,5 +87,14 @@ public class Player : Body {
     {
         if (collision.gameObject.tag == "Floor")
             grounded = false;
+    }
+
+    private void TimerText(){
+        timer += Time.deltaTime;
+        timerText.text = "Time: " + Mathf.Floor(timer).ToString();
+    }
+
+    private void ScoreText(){
+        scoreText.text = "Score: " + score;
     }
 }
