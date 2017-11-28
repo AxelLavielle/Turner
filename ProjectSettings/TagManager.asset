@@ -9,6 +9,7 @@ TagManager:
   - Trap
   - Death
   - PauseMenu
+  - Floor_End
   layers:
   - Default
   - TransparentFX

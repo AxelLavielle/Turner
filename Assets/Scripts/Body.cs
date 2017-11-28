@@ -69,13 +69,11 @@ public class Body : MonoBehaviour {
         {
             if (temp < 0 && direction == 1)
             {
-                direction = -1;
-                enemy.idle = false;
+                enemy.Flip();
             }
             else if (temp > 0 && direction == -1)
             {
-                direction = 0;
-                enemy.idle = false;
+                enemy.Flip();
             }
         }
     }
