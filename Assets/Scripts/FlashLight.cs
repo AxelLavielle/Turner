@@ -41,33 +41,7 @@ public class FlashLight : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown("1"))
-        {
-            setColor(1, 0, 0);
-            last2 = last1;
-            last1 = Color.red;
-            rend1.material.color = last1;
-            rend2.material.color = last2;
-        }
-        else if (Input.GetKeyDown("2"))
-        {
-            setColor(0, 0, 1);
-            last2 = last1;
-            last1 = Color.blue;
-            rend1.material.color = last1;
-            rend2.material.color = last2;
-        }
-        else if (Input.GetKeyDown("3"))
-        {
-            setColor(1, 1, 0);
-            last2 = last1;
-            last1 = Color.yellow;
-            rend1.material.color = last1;
-            rend2.material.color = last2;
-        }
-        else if (Input.GetKeyDown("e"))
-            Mix();
-        if (Input.GetKeyDown("1") && colorNumber > 0)
+       if (Input.GetKeyDown("1") && colorNumber > 0)
         {
             setColor(1, 0, 0);
             last2 = last1;
