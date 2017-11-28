@@ -10,6 +10,8 @@ TagManager:
   - Death
   - PauseMenu
   - Floor_End
+  - Last1
+  - Last2
   layers:
   - Default
   - TransparentFX
