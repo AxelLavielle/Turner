@@ -10,8 +10,7 @@ public class Player : Body {
     private Animator anim;
     private Rigidbody2D rgdbd;
     private bool jump = false;
-    public int life;
-    public GameObject gameoverMenu;
+
     
     private void Start () {
         anim = GetComponent<Animator>();
@@ -55,8 +54,6 @@ public class Player : Body {
         if (Input.GetButtonDown("Jump"))
             jump = true;
 
-        GameOver();
-
     }
 
     private void FixedUpdate()
@@ -67,8 +64,6 @@ public class Player : Body {
     private void death()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        life--;
-
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -83,14 +78,6 @@ public class Player : Body {
     {
         if (collision.gameObject.tag == "Floor")
             grounded = false;
-    }
-
-    private void GameOver()
-    {
-        if(life <= 0) {
-            Time.timeScale = 0;
-            Instantiate(gameoverMenu, Vector3.zero, Quaternion.identity);
-        }
     }
 
 }
