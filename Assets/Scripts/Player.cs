@@ -10,11 +10,22 @@ public class Player : Body {
     private Animator anim;
     private Rigidbody2D rgdbd;
     private bool jump = false;
+    private FlashLight light;
 
     
     private void Start () {
         anim = GetComponent<Animator>();
         rgdbd = GetComponent<Rigidbody2D>();
+        light = gameObject.transform.GetChild(0).transform.GetChild(0).GetComponent<FlashLight>();
+        print(SceneManager.GetActiveScene().buildIndex);
+        if (SceneManager.GetActiveScene().buildIndex > 1)
+        {
+            print("adding colors");
+            if (SceneManager.GetActiveScene().buildIndex % 2 == 0)
+                light.addColor(SceneManager.GetActiveScene().buildIndex / 2);
+            else
+                light.addColor(SceneManager.GetActiveScene().buildIndex - 2);
+        }
     }
 
     private void Flip()
@@ -67,6 +78,11 @@ public class Player : Body {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
+    public int colorNb()
+    {
+        return light.getColorNb();
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Floor")
@@ -77,10 +93,15 @@ public class Player : Body {
         }
         else if (collision.gameObject.tag == "Death" || collision.gameObject.tag == "Trap")
             death();
-        else if (collision.gameObject.tag == "lvlend")
+        if (collision.gameObject.tag == "lvlend")
         {
             print("onto next level");
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        if (collision.gameObject.tag == "ColorPickup")
+        {
+            light.addColor(1);
+            Destroy(collision.gameObject);
         }
     }
 
