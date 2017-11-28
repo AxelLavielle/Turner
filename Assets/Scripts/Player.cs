@@ -10,16 +10,11 @@ public class Player : Body {
     private Animator anim;
     private Rigidbody2D rgdbd;
     private bool jump = false;
-    private float timer;
-    private int score;
-    public Text timerText;
-    public Text scoreText;
+
     
     private void Start () {
         anim = GetComponent<Animator>();
         rgdbd = GetComponent<Rigidbody2D>();
-        timer = 0f;
-        score = 0;
     }
 
     private void Flip()
@@ -57,12 +52,8 @@ public class Player : Body {
     private void Update()
     {
         if (Input.GetButtonDown("Jump"))
-        { 
-            jump = true; 
-        }
+            jump = true;
 
-        TimerText();
-        ScoreText();
     }
 
     private void FixedUpdate()
@@ -89,12 +80,4 @@ public class Player : Body {
             grounded = false;
     }
 
-    private void TimerText(){
-        timer += Time.deltaTime;
-        timerText.text = "Time: " + Mathf.Floor(timer).ToString();
-    }
-
-    private void ScoreText(){
-        scoreText.text = "Score: " + score;
-    }
 }

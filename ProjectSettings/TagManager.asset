@@ -8,6 +8,7 @@ TagManager:
   - Light
   - Trap
   - Death
+  - PauseMenu
   layers:
   - Default
   - TransparentFX
