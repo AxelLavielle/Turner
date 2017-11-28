@@ -16,7 +16,7 @@ public class Level3 : MonoBehaviour {
 	void Start () {
         player = GetComponent<Player>();
         getBlue = false;
-        tipsText.text = "Go to get the Blue!";
+        tipsText.text = "Pick up the blue sphere!";
 
 	}
 	
@@ -46,7 +46,7 @@ public class Level3 : MonoBehaviour {
     private void SetTipsText()
     {
         if(getBlue) {
-            tipsText.text = "You can fly with Blue now. \r\nFly trought the traps. Don't touch!";
+            tipsText.text = "You can fly with Blue now. \r\nFly over the traps. Don't touch them!";
         }
 
         if (transform.position.x > 1675f){

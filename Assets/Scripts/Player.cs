@@ -73,6 +73,11 @@ public class Player : Body {
             grounded = true;
         else if (collision.gameObject.tag == "Death" || collision.gameObject.tag == "Trap")
             death();
+        else if (collision.gameObject.tag == "lvlend")
+        {
+            print("onto next level");
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
 
 }
