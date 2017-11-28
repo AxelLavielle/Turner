@@ -5,17 +5,13 @@ using UnityEngine.UI;
 
 public class Level3 : MonoBehaviour {
     Player player;
-    public GameObject projector;
     GameObject proj;
     GameObject blueLight;
     public Text tipsText;
-    bool getBlue;
-
 
 	// Use this for initialization
 	void Start () {
         player = GetComponent<Player>();
-        getBlue = false;
         tipsText.text = "Pick up the blue sphere!";
 
 	}
@@ -25,28 +21,11 @@ public class Level3 : MonoBehaviour {
         SetTipsText();
 	}
 
-    void CreateBlueLight()
-    {
-        proj = Instantiate(projector, GameObject.Find("Hand").transform.position, Quaternion.identity);
-        proj.transform.parent = this.transform;
-        blueLight = GameObject.Find("Light");
-        blueLight.GetComponent<SpriteRenderer>().color = new UnityEngine.Color(0, 0, 1, 0.5f);
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.gameObject.tag == "BluePickup") {
-            CreateBlueLight();
-            getBlue = true;
-            Destroy(collision.gameObject);
-        }
-
-    }
 
     private void SetTipsText()
     {
-        if(getBlue) {
-            tipsText.text = "You can fly with Blue now. \r\nFly over the traps. Don't touch them!";
+        if(player.colorNb() > 1) {
+            tipsText.text = "Blue allows you to levitate over the ground\r\nYou can now switch between blue and red with the keys 1 or 2.\r\nFly over the traps. Don't touch them!";
         }
 
         if (transform.position.x > 1675f){
