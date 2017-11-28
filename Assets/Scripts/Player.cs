@@ -53,12 +53,13 @@ public class Player : Body {
     {
         if (Input.GetButtonDown("Jump"))
             jump = true;
-
+        movements();
     }
 
     private void FixedUpdate()
     {
-        movements();
+        if (rgdbd.velocity.y < -5)
+            grounded = false;
     }
 
     private void death()
@@ -72,12 +73,6 @@ public class Player : Body {
             grounded = true;
         else if (collision.gameObject.tag == "Death")
             death();
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Floor")
-            grounded = false;
     }
 
 }
