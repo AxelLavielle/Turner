@@ -1134,6 +1134,22 @@ Prefab:
       propertyPath: m_TagString
       value: BluePickup
       objectReference: {fileID: 0}
+    - target: {fileID: 212479581715180804, guid: 3b96c18a813ee484b904d1c85b5d307d,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b2a3f2ddbdfb6488cb147061ef91d42a,
+        type: 3}
+    - target: {fileID: 212479581715180804, guid: 3b96c18a813ee484b904d1c85b5d307d,
+        type: 2}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212479581715180804, guid: 3b96c18a813ee484b904d1c85b5d307d,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 3b96c18a813ee484b904d1c85b5d307d, type: 2}
@@ -1400,8 +1416,6 @@ MonoBehaviour:
   dampTime: 0.1
   target: {fileID: 1948215391}
   cameraPositionThresholdY: -351
-  cameraPositionThresholdX: 0
-  cameraPositionThresholdMaxX: 0
 --- !u!82 &621398986
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3404,8 +3418,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b23121bc1ee8f4fac89af0233b3f93df, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: b2a3f2ddbdfb6488cb147061ef91d42a, type: 3}
   m_Color: {r: 0, g: 0.013383502, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3413,7 +3427,7 @@ SpriteRenderer:
   m_Size: {x: 0.38, y: 0.38}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
 --- !u!4 &1385278170
 Transform:
@@ -3427,7 +3441,7 @@ Transform:
   m_LocalScale: {x: 200, y: 200, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1426816714
 GameObject:
@@ -4697,7 +4711,7 @@ Transform:
   - {fileID: 1475316090}
   - {fileID: 1736215884}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1989545368
 GameObject:
