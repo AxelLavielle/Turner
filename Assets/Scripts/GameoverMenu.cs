@@ -9,6 +9,7 @@ public class GameoverMenu : MonoBehaviour {
     GamingUI gamingUI;
 	// Use this for initialization
 	void Start () {
+        gamingUI = new GamingUI();
         gamingUI = GameObject.Find("GamingUI").GetComponent<GamingUI>();
         scoreText.text = gamingUI.scoreText.text;
         timerText.text = gamingUI.timerText.text;
