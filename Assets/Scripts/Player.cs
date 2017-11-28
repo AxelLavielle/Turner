@@ -71,7 +71,7 @@ public class Player : Body {
     {
         if (collision.gameObject.tag == "Floor")
             grounded = true;
-        else if (collision.gameObject.tag == "Death")
+        else if (collision.gameObject.tag == "Death" || collision.gameObject.tag == "Trap")
             death();
     }
 

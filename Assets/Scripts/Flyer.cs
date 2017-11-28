@@ -16,7 +16,7 @@ public class Flyer : MonoBehaviour {
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Floor")
+        if (collision.gameObject.tag == "Floor"|| collision.gameObject.tag == "Trap")
         {
             if (collision.gameObject.GetComponent<Plateform>().getColor() == 5)
             {

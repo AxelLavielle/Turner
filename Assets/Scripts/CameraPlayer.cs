@@ -11,11 +11,12 @@ public class CameraPlayer : MonoBehaviour
     private Transform target;
     [SerializeField]
     private int cameraPositionThresholdY;
+    /*
     [SerializeField]
     private int cameraPositionThresholdX;
     [SerializeField]
     private int cameraPositionThresholdMaxX;
-
+    */
 
     void FixedUpdate()
     {
@@ -26,11 +27,13 @@ public class CameraPlayer : MonoBehaviour
         //We form the destination from our position to the delta
         Vector3 destination = transform.position + delta;
         //We go to it
+        /*
         destination.y /= 3;
         if (destination.x < cameraPositionThresholdX)
             destination.x = cameraPositionThresholdX;
         else if (destination.x > cameraPositionThresholdMaxX)
             destination.x = cameraPositionThresholdMaxX;
+        */
         if (destination.y < cameraPositionThresholdY)
             destination.y = cameraPositionThresholdY;
         transform.position = Vector3.SmoothDamp(transform.position, destination, ref velocity, dampTime);

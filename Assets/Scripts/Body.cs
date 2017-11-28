@@ -58,7 +58,7 @@ public class Body : MonoBehaviour {
 
     public void Blue(float dist)
     {
-        GetComponent<Rigidbody2D>().AddForce(Vector2.up * ((150 - dist) * 30));
+        GetComponent<Rigidbody2D>().AddForce(Vector2.up * ((200 - dist) * 30));
     }
 
     public void Purple()
