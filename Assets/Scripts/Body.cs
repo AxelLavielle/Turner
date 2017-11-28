@@ -10,7 +10,6 @@ public class Body : MonoBehaviour {
     private float jumpForceNeutral;
 
     private float gravity;
-    private float originalJumpForce;
 
     public int direction = -1;
 
@@ -26,7 +25,6 @@ public class Body : MonoBehaviour {
     {
         moveForce = moveForceNeutral;
         jumpForce = jumpForceNeutral;
-        originalJumpForce = jumpForceNeutral;
         gravity = GetComponent<Rigidbody2D>().gravityScale;
     }
 
@@ -39,18 +37,13 @@ public class Body : MonoBehaviour {
 
     public void Red()
     {
-        moveForce = moveForceNeutral * 2;
-        jumpForce = jumpForceNeutral * 2;
+        moveForce = moveForceNeutral * 1.5f;
+        jumpForce = jumpForceNeutral * 1.5f;
     }
 
     public void Orange()
     {
         moveForce = moveForceNeutral / 2;
-    }
-
-    public void Yellow()
-    {
-
     }
 
     public void Green()

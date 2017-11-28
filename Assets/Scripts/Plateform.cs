@@ -6,6 +6,18 @@ public class Plateform : MonoBehaviour {
     [SerializeField]
     private int color;
     private int oldColor;
+
+    [SerializeField]
+    bool isActivable = false;
+    [SerializeField]
+    Vector2 moveTo;
+    [SerializeField]
+    bool doGoBack = true;
+    [SerializeField]
+    float speed = 1;
+
+    Vector2 startPoint;
+
     [SerializeField]
     private float fadeSpeed = 0.05f;
     SpriteRenderer spriteRenderer;
@@ -15,6 +27,7 @@ public class Plateform : MonoBehaviour {
     void Start () {
         colorToGo = new Color(1, 1, 1);
         spriteRenderer = GetComponent<SpriteRenderer>();
+        startPoint = transform.position;
     }
 
     void setColor(int newColor)
@@ -46,7 +59,24 @@ public class Plateform : MonoBehaviour {
     // Update is called once per frame
     void FixedUpdate () {
         spriteRenderer.color = Color.Lerp(spriteRenderer.color, colorToGo, fadeSpeed);
+        if (color == 3 && isActivable)
+            Move();
 	}
+
+    private void Move()
+    {
+        transform.position = Vector2.MoveTowards(transform.position, moveTo, Time.deltaTime * speed);
+        if (transform.position.x == moveTo.x && transform.position.y == moveTo.y)
+        {
+            if (doGoBack)
+            {
+                moveTo = startPoint;
+                startPoint = transform.position;
+            }
+            else
+                isActivable = false;
+        }
+    }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -70,8 +100,6 @@ public class Plateform : MonoBehaviour {
                     tmpBody.Red();
                 else if (tmp == 2)
                     tmpBody.Orange();
-                else if (tmp == 3)
-                    tmpBody.Yellow();
                 else if (tmp == 4)
                     tmpBody.Green();
                 else if (tmp == 6)

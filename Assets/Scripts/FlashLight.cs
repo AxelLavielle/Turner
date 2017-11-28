@@ -24,7 +24,7 @@ public class FlashLight : MonoBehaviour {
         else if (Input.GetKeyDown("2"))
             setColor(0, 0, 1);
         else if (Input.GetKeyDown("3"))
-            setColor(1, 0, 1);
+            setColor(1, 1, 0);
     }
 
     public int getColor()
