@@ -1,22 +1,23 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Level3 : MonoBehaviour {
+public class Level4 : MonoBehaviour {
     Player player;
     public GameObject projector;
     GameObject proj;
     GameObject blueLight;
+    public GameObject tips;
     public Text tipsText;
-    bool getBlue;
+    bool win;
 
 
 	// Use this for initialization
 	void Start () {
         player = GetComponent<Player>();
-        getBlue = false;
-        tipsText.text = "Go to get the Blue!";
+        win = false;
+        tipsText.text = "Go to get the Blue!.";
 
 	}
 	
@@ -37,7 +38,6 @@ public class Level3 : MonoBehaviour {
     {
         if(collision.gameObject.tag == "BluePickup") {
             CreateBlueLight();
-            getBlue = true;
             Destroy(collision.gameObject);
         }
 
@@ -45,13 +45,11 @@ public class Level3 : MonoBehaviour {
 
     private void SetTipsText()
     {
-        if(getBlue) {
-            tipsText.text = "You can fly with Blue now. \r\nFly trought the traps. Don't touch!";
+        if (transform.position.x > 8000f && !win){
+            Instantiate(tips, Vector2.zero, Quaternion.identity);
+            win = true;
         }
-
-        if (transform.position.x > 1675f){
-            tipsText.text = "Bravo! Go to next level!\r\nYou can press 2 to use Blue after.";
-        }
+        tipsText.text = "Bravo! Go to next level!";
             
     }
 

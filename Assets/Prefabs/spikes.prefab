@@ -84,9 +84,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4956827938443324}
   - component: {fileID: 61631260607834088}
+  - component: {fileID: 114965980555332764}
   m_Layer: 0
-  m_Name: spikes
-  m_TagString: Death
+  m_Name: Spikes
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -245,6 +246,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 440, y: 413.18604}
   m_EdgeRadius: 0
+--- !u!114 &114965980555332764
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1729907151906944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f1e940aaa553bb4197128918554132a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
+  fadeSpeed: 0.05
 --- !u!212 &212164415038524834
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -286,6 +304,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!212 &212229081289456516
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -327,6 +346,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!212 &212247061009124536
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -368,6 +388,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!212 &212281123317972740
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -409,6 +430,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!212 &212348151578872850
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -450,6 +472,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!212 &212833124061201438
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -491,3 +514,4 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
