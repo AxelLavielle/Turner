@@ -1416,6 +1416,8 @@ MonoBehaviour:
   dampTime: 0.1
   target: {fileID: 1948215391}
   cameraPositionThresholdY: -351
+  cameraPositionThresholdX: -1500
+  cameraPositionThresholdMaxX: 2000
 --- !u!82 &621398986
 AudioSource:
   m_ObjectHideFlags: 0

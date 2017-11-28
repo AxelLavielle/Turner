@@ -477,6 +477,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
+  isActivable: 0
+  moveTo: {x: 0, y: 0}
+  doGoBack: 1
+  speed: 1
   fadeSpeed: 0.05
 --- !u!1001 &353842304
 Prefab:
@@ -978,6 +982,8 @@ MonoBehaviour:
   dampTime: 0.1
   target: {fileID: 1948215391}
   cameraPositionThresholdY: -351
+  cameraPositionThresholdX: -1500
+  cameraPositionThresholdMaxX: 228
 --- !u!82 &621398986
 AudioSource:
   m_ObjectHideFlags: 0
