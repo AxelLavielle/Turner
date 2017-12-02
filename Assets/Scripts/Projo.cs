@@ -11,7 +11,7 @@ public class Projo : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	public void Update () {
         Vector3 diff = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         diff.z = 0.0f;
         diff.Normalize();
