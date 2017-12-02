@@ -1328,7 +1328,12 @@ Prefab:
     - target: {fileID: 114922723510765806, guid: 9fefd72e7f0798b4a845af4cf50bb353,
         type: 2}
       propertyPath: moveForce
-      value: 300
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114922723510765806, guid: 9fefd72e7f0798b4a845af4cf50bb353,
+        type: 2}
+      propertyPath: jumpForceNeutral
+      value: 500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9fefd72e7f0798b4a845af4cf50bb353, type: 2}
