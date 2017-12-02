@@ -19,18 +19,12 @@ public class Enemy : Body {
         theScale.x *= -1;
         transform.localScale = theScale;
         direction *= -1;
+        anim.SetBool("isWalking", true);
     }
 
     // Update is called once per frame
     void FixedUpdate () {
         transform.Translate(new Vector2(direction, 0) * moveForce * Time.deltaTime);
-
-        Debug.Log("Enemy.vel.x: " + Rigidbody.velocity.x);
-        if (Mathf.Abs(Rigidbody.velocity.x) > 0)
-            anim.SetBool("isWalking", true);
-        if (Mathf.Approximately(Rigidbody.velocity.x, 0))
-            anim.SetBool("isWalking", false);
-            
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -39,7 +33,7 @@ public class Enemy : Body {
         {
             Flip();
         }
-        else if (collision.gameObject.tag == "Death" || collision.gameObject.tag == "Trap")
+        else if (collision.gameObject.tag == "Trap")
             Destroy(gameObject);
     }
 
