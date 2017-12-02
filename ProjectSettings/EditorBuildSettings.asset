@@ -22,4 +22,10 @@ EditorBuildSettings:
     guid: aa582eaf7b5954e5d88a8f20be4bd1e9
   - enabled: 1
     path: Assets/Scenes/Level5.unity
+    guid: 3923ee00342a0c94c93bc2afa9560bdc
+  - enabled: 1
+    path: Assets/Scenes/Level6.unity
+    guid: 7987161e6d47d714d9b3b64f40ac8064
+  - enabled: 1
+    path: Assets/Scenes/Level_tuto_purple.unity
     guid: 00000000000000000000000000000000
