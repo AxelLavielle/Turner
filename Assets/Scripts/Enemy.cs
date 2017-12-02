@@ -30,6 +30,8 @@ public class Enemy : Body {
         {
             Flip();
         }
+        else if (collision.gameObject.tag == "Death" || collision.gameObject.tag == "Trap")
+            Destroy(gameObject);
     }
 
 }

@@ -71,48 +71,14 @@ public class FlashLight : MonoBehaviour {
 
     private void Mix()
     {
-        float r = 0;
-        float g = 0;
-        float b = 0;
-        if (last1 == Color.red)
-            r = 1;
-        else if (last1 == Color.blue)
-            b = 1;
-
-        if (last2 == Color.red)
-            r = 1;
-        else if (last2 == Color.blue)
-            b = 1;
-
-        if(last1 == Color.yellow)
-        {
-            if (last2 == Color.red)
-            {
-                r = 1f;
-                g = 0.5f;
-            }
-            else if (last2 == Color.blue)
-            {
-                b = 0;
-                g = 1;
-            }
-            else
-            {
-                r = 1;
-                g = 1;
-            }
-        }
-        if (last2 == Color.yellow)
-        {
-            if (last1 == Color.red)
-            {
-                r = 0.5f;
-                g = 0.5f;
-            }
-            else if (last1 == Color.blue)
-                g = 1;
-        }
-        setColor(r, g, b);
+        if (last1.r == last2.r && last1.g == last2.g && last1.b == last2.b)
+            return;
+        if ((last1 == Color.red && last2 == Color.blue) || (last2 == Color.red && last1 == Color.blue))
+            setColor(1, 0, 1);
+        else if ((last1 == Color.red && last2 == Color.yellow) || (last2 == Color.red && last1 == Color.yellow))
+            setColor(1, 0.5f, 0);
+        else
+            setColor(0, 1, 0);
     }
 
     public int getColor()
