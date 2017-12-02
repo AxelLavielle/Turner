@@ -43,6 +43,13 @@ public class Player : Body {
 
     private void Movements()
     {
+        //In case the player want to jump, well, we make it jump
+        if (grounded && jump && Mathf.RoundToInt(rgdbd.velocity.y / 2) == 0)
+        {
+            grounded = false;
+            rgdbd.AddForce(new Vector2(0f, jumpForce * 100));
+        }
+
         //Get the horizontal axis
         float h = Input.GetAxis("Horizontal");
 
@@ -54,21 +61,18 @@ public class Player : Body {
         if ((h > 0 && !facingRight) || h < 0 && facingRight)
             Flip();
 
-        //In case the player want to jump, well, we make it jump
-        if (grounded && jump && Mathf.RoundToInt(rgdbd.velocity.y / 2) == 0)
-        {
-            grounded = false;
-            rgdbd.AddForce(new Vector2(0f, jumpForce * 100));
-        }
         jump = false;
     }
 
     private void Update()
     {
         if (Input.GetButtonDown("Jump"))
+        {
             jump = true;
+            if (GetComponent<Rigidbody2D>().gravityScale == 0)
+                reset();
+        }
         Movements();
-
     }
 
     private void FixedUpdate()

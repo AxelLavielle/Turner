@@ -28,6 +28,12 @@ public class Body : MonoBehaviour {
         gravity = GetComponent<Rigidbody2D>().gravityScale;
     }
 
+    public void reset()
+    {
+        grounded = true;
+        Neutral();
+    }
+
     public void Neutral()
     {
         moveForce = moveForceNeutral;
@@ -48,12 +54,9 @@ public class Body : MonoBehaviour {
 
     public void Green()
     {
-        if (grounded)
-        {
-            moveForce = 0;
-            GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-            GetComponent<Rigidbody2D>().gravityScale = 0;
-        }
+        moveForce = 0;
+        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        GetComponent<Rigidbody2D>().gravityScale = 0;
     }
 
     public void Blue(float dist)
