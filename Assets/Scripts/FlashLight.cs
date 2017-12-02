@@ -112,8 +112,6 @@ public class FlashLight : MonoBehaviour {
             else if (last1 == Color.blue)
                 g = 1;
         }
-        Debug.Log(last1);
-        Debug.Log(last2);
         setColor(r, g, b);
     }
 
