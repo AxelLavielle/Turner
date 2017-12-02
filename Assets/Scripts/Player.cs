@@ -12,6 +12,8 @@ public class Player : Body {
     private bool jump = false;
     private FlashLight flash;
 
+    public GameObject gamingUI;
+
     
     private void Start () {
         anim = GetComponent<Animator>();
@@ -29,6 +31,7 @@ public class Player : Body {
                 nb--;
             flash.addColor(nb);
         }
+        Instantiate(gamingUI);
     }
 
     private void Flip()

@@ -145,7 +145,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4956827938443324, guid: e4093ff44f5b24c4f89a39e5524ae00e, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1729907151906944, guid: e4093ff44f5b24c4f89a39e5524ae00e, type: 2}
       propertyPath: m_Name
@@ -4565,6 +4565,12 @@ Prefab:
       propertyPath: scaleNeutral.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114995832207699488, guid: 4ff7dc6e59accc74bbfb740a4e18dec3,
+        type: 2}
+      propertyPath: gamingUI
+      value: 
+      objectReference: {fileID: 1252126987830686, guid: 5e4a9039c024d4842b4db28a058450f5,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4ff7dc6e59accc74bbfb740a4e18dec3, type: 2}
   m_IsPrefabParent: 0

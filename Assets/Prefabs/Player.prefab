@@ -499,6 +499,7 @@ MonoBehaviour:
   moveForce: 0
   jumpForce: 0
   facingRight: 1
+  gamingUI: {fileID: 1252126987830686, guid: 5e4a9039c024d4842b4db28a058450f5, type: 2}
 --- !u!135 &135599531830716470
 SphereCollider:
   m_ObjectHideFlags: 1
