@@ -10,6 +10,7 @@ public class Enemy : Body {
 	void Start () {
         Rigidbody = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        anim.SetBool("isWalking", true);
     }
 
     public void Flip()
@@ -19,7 +20,6 @@ public class Enemy : Body {
         theScale.x *= -1;
         transform.localScale = theScale;
         direction *= -1;
-        anim.SetBool("isWalking", true);
     }
 
     // Update is called once per frame

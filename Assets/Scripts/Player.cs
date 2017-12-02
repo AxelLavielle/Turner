@@ -80,7 +80,7 @@ public class Player : Body {
 
     private void FixedUpdate()
     {
-        if (rgdbd.velocity.y < -5)
+        if (Mathf.Abs(rgdbd.velocity.y) > 5)
             grounded = false;
 
 
