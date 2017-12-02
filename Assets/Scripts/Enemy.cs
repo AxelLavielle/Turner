@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : Body {
-    Rigidbody2D Rigidbody;    
+    Rigidbody2D Rigidbody;
+    Animator anim;
 
 	// Use this for initialization
 	void Start () {
         Rigidbody = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     public void Flip()
@@ -22,6 +24,13 @@ public class Enemy : Body {
     // Update is called once per frame
     void FixedUpdate () {
         transform.Translate(new Vector2(direction, 0) * moveForce * Time.deltaTime);
+
+        Debug.Log("Enemy.vel.x: " + Rigidbody.velocity.x);
+        if (Mathf.Abs(Rigidbody.velocity.x) > 0)
+            anim.SetBool("isWalking", true);
+        if (Mathf.Approximately(Rigidbody.velocity.x, 0))
+            anim.SetBool("isWalking", false);
+            
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
