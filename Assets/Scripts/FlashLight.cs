@@ -83,6 +83,8 @@ public class FlashLight : MonoBehaviour {
 
     public int getColor()
     {
+        if (colorNumber == 0)
+            return 0;
         if (render.color.r > 0.6 && render.color.g > 0.6)
             return 3;
         if (render.color.r > 0 && render.color.g > 0)
