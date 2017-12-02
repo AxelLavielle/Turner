@@ -88,7 +88,7 @@ public class FlashLight : MonoBehaviour {
         {
             if (last2 == Color.red)
             {
-                r = 0.5f;
+                r = 1f;
                 g = 0.5f;
             }
             else if (last2 == Color.blue)
@@ -119,23 +119,37 @@ public class FlashLight : MonoBehaviour {
 
     public int getColor()
     {
-        if (colorNumber == 0)
-            return 0;
-        int color = 0;
+        print(render.color.r + " " + render.color.g + " " + render.color.g);
+        if (render.color.r > 0.6 && render.color.g > 0.6)
+        {
+            print("yellow 3");
+            return 3;
+        }
+        if (render.color.r > 0 && render.color.g > 0)
+        {
+            print("orange 2");
+            return 2;
+        }
+        if (render.color.r > 0 && render.color.b > 0)
+        {
+            print("purple 6");
+            return 6;
+        }
         if (render.color.r > 0)
         {
-            color = 1;
-            if (render.color.g == 1)
-                color += 2;
-            else if (render.color.g > 0)
-                color += 1;
-            else if (render.color.b > 0)
-                color += 5;
+            print("red 1");
+            return 1;
         }
-        else if (render.color.g > 0)
+        if (render.color.g > 0)
+        {
+            print("green 4");
             return 4;
-        else
+        }
+        if (render.color.b > 0)
+        {
+            print("blue 5");
             return 5;
-        return color;
+        }
+        return 0;
     }
 }
