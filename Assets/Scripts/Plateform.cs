@@ -89,8 +89,11 @@ public class Plateform : MonoBehaviour {
 
     private void OnCollisionStay2D(Collision2D collision)
     {
+        print("COLLISION STAY");
         if (color != -1)
         {
+            print("color not -1");
+            print(collision.gameObject.tag);
             Body tmpBody = collision.gameObject.GetComponent<Body>();
             if (tmpBody != null)
             {

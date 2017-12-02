@@ -10,21 +10,21 @@ public class Player : Body {
     private Animator anim;
     private Rigidbody2D rgdbd;
     private bool jump = false;
-    private FlashLight light;
+    private FlashLight flash;
 
     
     private void Start () {
         anim = GetComponent<Animator>();
         rgdbd = GetComponent<Rigidbody2D>();
-        light = gameObject.transform.GetChild(0).transform.GetChild(0).GetComponent<FlashLight>();
+        flash = gameObject.transform.GetChild(0).transform.GetChild(0).GetComponent<FlashLight>();
         print(SceneManager.GetActiveScene().buildIndex);
         if (SceneManager.GetActiveScene().buildIndex > 1)
         {
-            print("adding colors");
+            //print("adding colors");
             if (SceneManager.GetActiveScene().buildIndex % 2 == 0)
-                light.addColor(SceneManager.GetActiveScene().buildIndex / 2);
+                flash.addColor(SceneManager.GetActiveScene().buildIndex / 2);
             else
-                light.addColor(SceneManager.GetActiveScene().buildIndex - 2);
+                flash.addColor(SceneManager.GetActiveScene().buildIndex - 2);
         }
     }
 
@@ -111,7 +111,7 @@ public class Player : Body {
 
     public int ColorNb()
     {
-        return light.getColorNb();
+        return flash.getColorNb();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -131,7 +131,7 @@ public class Player : Body {
         }
         if (collision.gameObject.tag == "ColorPickup")
         {
-            light.addColor(1);
+            flash.addColor(1);
             Destroy(collision.gameObject);
         }
     }
