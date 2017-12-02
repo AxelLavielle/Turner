@@ -15506,7 +15506,7 @@ GameObject:
   - component: {fileID: 1627282492}
   m_Layer: 0
   m_Name: tiles1_314 (3)
-  m_TagString: Floor
+  m_TagString: Floor_End
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
