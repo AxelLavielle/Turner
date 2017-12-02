@@ -112,11 +112,8 @@ public class Plateform : MonoBehaviour {
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        print("OnTriggerExit2D");
         if (color != -1 && collision.gameObject.tag == "Light")
-        {
             setColor(0);
-        }
     }
 
 
