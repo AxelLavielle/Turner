@@ -104,16 +104,24 @@ public class Plateform : MonoBehaviour {
                 else if (tmp == 2)
                     tmpBody.Orange();
                 else if (tmp == 4)
+                {
                     tmpBody.Green();
+                    collision.gameObject.transform.SetParent(transform);
+                }
+                else if (tmp == 5)
+                    collision.gameObject.transform.SetParent(transform);
                 else if (tmp == 6)
                     tmpBody.Purple();
             }
         }
-        if (isActivable == true && collision.gameObject.tag == "Player" && color == 3 && (transform.position.y - moveTo.y < 0))
-            collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 80, ForceMode2D.Impulse);
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        collision.gameObject.transform.SetParent(transform.root);
+    }
+
+        private void OnTriggerExit2D(Collider2D collision)
     {
         if (color != -1 && collision.gameObject.tag == "Light")
             setColor(0);
