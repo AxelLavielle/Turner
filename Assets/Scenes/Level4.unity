@@ -4679,7 +4679,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &621398985
 MonoBehaviour:
@@ -4693,9 +4693,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dampTime: 0.1
-  target: {fileID: 1222436396}
+  target: {fileID: 925246062}
   cameraPositionThresholdY: -340
-  cameraPositionThresholdX: -2320
+  cameraPositionThresholdX: -3000
   cameraPositionThresholdMaxX: 8000
 --- !u!82 &621398986
 AudioSource:
@@ -6751,6 +6751,14 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: -321
       objectReference: {fileID: 0}
+    - target: {fileID: 4652023872559068, guid: 4ff7dc6e59accc74bbfb740a4e18dec3, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -2620
+      objectReference: {fileID: 0}
+    - target: {fileID: 4652023872559068, guid: 4ff7dc6e59accc74bbfb740a4e18dec3, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -631
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4ff7dc6e59accc74bbfb740a4e18dec3, type: 2}
   m_IsPrefabParent: 0
@@ -7328,6 +7336,11 @@ MonoBehaviour:
   doGoBack: 1
   speed: 1
   fadeSpeed: 0.05
+--- !u!4 &925246062 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4652023872559068, guid: 4ff7dc6e59accc74bbfb740a4e18dec3,
+    type: 2}
+  m_PrefabInternal: {fileID: 826505184}
 --- !u!1 &935612870
 GameObject:
   m_ObjectHideFlags: 0
@@ -9718,11 +9731,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e4093ff44f5b24c4f89a39e5524ae00e, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &1222436396 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4178428417537568, guid: 4ff7dc6e59accc74bbfb740a4e18dec3,
-    type: 2}
-  m_PrefabInternal: {fileID: 826505184}
 --- !u!1 &1277053083
 GameObject:
   m_ObjectHideFlags: 0

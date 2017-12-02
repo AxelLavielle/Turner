@@ -28,7 +28,7 @@ public class Level1 : MonoBehaviour
 
     private void SetTipsText()
     {
-        if (player.colorNb() > 0)
+        if (player.ColorNb() > 0)
         {
             tipsText.text = "Point the light at the ground to speed up and jump higher. \r\nGo to the destination";
         }

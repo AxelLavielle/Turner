@@ -38,7 +38,7 @@ public class Player : Body {
         transform.localScale = theScale;
     }
 
-    private void movements()
+    private void Movements()
     {
         //Get the horizontal axis
         float h = Input.GetAxis("Horizontal");
@@ -64,21 +64,45 @@ public class Player : Body {
     {
         if (Input.GetButtonDown("Jump"))
             jump = true;
-        movements();
+        Movements();
+
     }
 
     private void FixedUpdate()
     {
         if (rgdbd.velocity.y < -5)
             grounded = false;
+
+
+        if (grounded)
+        {
+            anim.SetBool("isJumping", false);
+        }
+
+        if (!grounded)
+        {
+            anim.SetBool("isJumping", true);
+        }
+
+        if (grounded && Mathf.Abs(rgdbd.velocity.x) > 0)
+        {
+            anim.SetBool("isWalking", true);
+        }
+
+        if (grounded && Mathf.Approximately(rgdbd.velocity.x, 0f))
+        {
+            anim.SetBool("isWalking", false);
+        }
     }
 
-    private void death()
+    private void Death()
     {
+        anim.SetBool("isDying", true);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        anim.SetBool("isDying", false);
     }
 
-    public int colorNb()
+    public int ColorNb()
     {
         return light.getColorNb();
     }
@@ -92,7 +116,7 @@ public class Player : Body {
             rgdbd.velocity = vel;
         }
         else if (collision.gameObject.tag == "Death" || collision.gameObject.tag == "Trap")
-            death();
+            Death();
         if (collision.gameObject.tag == "lvlend")
         {
             print("onto next level");
