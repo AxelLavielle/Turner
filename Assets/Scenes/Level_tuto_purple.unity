@@ -757,11 +757,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4652023872559068, guid: 4ff7dc6e59accc74bbfb740a4e18dec3, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -829
+      value: -800
       objectReference: {fileID: 0}
     - target: {fileID: 4652023872559068, guid: 4ff7dc6e59accc74bbfb740a4e18dec3, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -229
+      value: -214
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114129409748445860, guid: 4ff7dc6e59accc74bbfb740a4e18dec3, type: 2}
