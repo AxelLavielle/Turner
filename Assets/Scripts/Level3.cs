@@ -24,7 +24,7 @@ public class Level3 : MonoBehaviour {
 
     private void SetTipsText()
     {
-        if(player.colorNb() > 1) {
+        if(player.ColorNb() > 1) {
             tipsText.text = "Blue allows you to levitate over the ground\r\nYou can now switch between blue and red with the keys 1 or 2.\r\nFly over the traps. Don't touch them!";
         }
 

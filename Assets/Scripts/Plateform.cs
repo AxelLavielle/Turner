@@ -106,12 +106,13 @@ public class Plateform : MonoBehaviour {
                     tmpBody.Purple();
             }
         }
-        if (collision.gameObject.tag == "Player" && color == 3 && (transform.position.y - moveTo.y < 0))
+        if (isActivable == true && collision.gameObject.tag == "Player" && color == 3 && (transform.position.y - moveTo.y < 0))
             collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 80, ForceMode2D.Impulse);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        print("OnTriggerExit2D");
         if (color != -1 && collision.gameObject.tag == "Light")
         {
             setColor(0);
