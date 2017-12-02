@@ -6,8 +6,8 @@ public class Body : MonoBehaviour {
 
     [SerializeField]
     private float moveForceNeutral;
-    [SerializeField]
-    private float jumpForceNeutral;
+        [SerializeField]
+        private float jumpForceNeutral;
 
     private float gravity;
 
