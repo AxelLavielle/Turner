@@ -29,7 +29,7 @@ public class Level3 : MonoBehaviour {
         }
 
         if (transform.position.x > 1675f){
-            tipsText.text = "Bravo! Go to next level!\r\nYou can press 2 to use Blue after.";
+            tipsText.text = "Bravo! Go to next level!\r\n";
         }
             
     }

@@ -18,13 +18,16 @@ public class Player : Body {
         rgdbd = GetComponent<Rigidbody2D>();
         flash = gameObject.transform.GetChild(0).transform.GetChild(0).GetComponent<FlashLight>();
         print(SceneManager.GetActiveScene().buildIndex);
-        if (SceneManager.GetActiveScene().buildIndex > 1)
+        int nb = 0;
+        if ((nb = SceneManager.GetActiveScene().buildIndex) > 1)
         {
             //print("adding colors");
-            if (SceneManager.GetActiveScene().buildIndex % 2 == 0)
-                flash.addColor(SceneManager.GetActiveScene().buildIndex / 2);
-            else
-                flash.addColor(SceneManager.GetActiveScene().buildIndex - 2);
+            if (nb % 2 != 0)
+                nb++;
+            nb /= 2;
+            if (SceneManager.GetActiveScene().buildIndex % 2 != 0)
+                nb--;
+            flash.addColor(nb);
         }
     }
 
