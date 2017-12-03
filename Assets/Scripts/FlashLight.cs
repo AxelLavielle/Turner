@@ -24,7 +24,6 @@ public class FlashLight : MonoBehaviour {
 
     public void addColor(int i)
     {
-        print("adding color");
         colorNumber += i;
         setColor(1, 0, 0);
     }

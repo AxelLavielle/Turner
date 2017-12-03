@@ -19,11 +19,9 @@ public class Player : Body {
         anim = GetComponent<Animator>();
         rgdbd = GetComponent<Rigidbody2D>();
         flash = gameObject.transform.GetChild(0).transform.GetChild(0).GetComponent<FlashLight>();
-        print(SceneManager.GetActiveScene().buildIndex);
         int nb = 0;
         if ((nb = SceneManager.GetActiveScene().buildIndex) > 1)
         {
-            //print("adding colors");
             if (nb % 2 != 0)
                 nb++;
             nb /= 2;
@@ -132,7 +130,6 @@ public class Player : Body {
             Death();
         if (collision.gameObject.tag == "lvlend")
         {
-            print("onto next level");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
         if (collision.gameObject.tag == "ColorPickup")

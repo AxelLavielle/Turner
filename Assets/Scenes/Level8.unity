@@ -2987,7 +2987,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a694f6db3b8510747a6ddd0d81763832, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveTo: {x: 2400, y: 853}
+  moveTo: {x: 2400, y: 853, z: -10}
   speed: 250
 --- !u!1001 &1466307770
 Prefab:
