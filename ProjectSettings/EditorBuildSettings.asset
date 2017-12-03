@@ -28,4 +28,16 @@ EditorBuildSettings:
     guid: 7987161e6d47d714d9b3b64f40ac8064
   - enabled: 1
     path: Assets/Scenes/Level_tuto_purple.unity
+    guid: 6f4dc90168417cc4e9ecc67f74393968
+  - enabled: 1
+    path: Assets/Scenes/Level7.unity
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Level8.unity
+    guid: 1745c24dbe8c5ad4a8eb8da34ee445f1
+  - enabled: 1
+    path: Assets/Scenes/final.unity
+    guid: d9b91a244f24547499119e79bdcc86f8
+  - enabled: 1
+    path: Assets/Scenes/EndScene.unity
+    guid: dc9ff3ad54063154fa1a6679d3260ca3
